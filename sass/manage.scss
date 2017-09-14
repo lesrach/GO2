@@ -1,0 +1,120 @@
+$qing: #18bb9c;
+
+
+a{
+    color: #666;
+}
+a:hover{
+    color: #ff6700;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+/*头*/
+.head{
+    height: 40px;
+    background: #333;
+    color: #ccc;
+}
+.head .fr a{
+    padding: 0 10px;
+    margin-top: 14px;
+    line-height: 12px;
+    border-right: 1px solid #ccc;
+    color: #ccc;
+    display: block;
+    float: left;
+}
+.head .fl{
+    line-height:40px;
+    font-size: 12px;
+}
+.head .fl a{
+   padding: 0 20px;
+   color: #ccc;
+}
+.time{
+    display: inline-block; 
+    text-align: center;
+}
+.time span{
+    width:16px;
+    display: inline-block;
+}
+.time .year{
+    width: 32px;
+}
+.date{
+    margin-right: 10px;
+}
+.un{
+    color: $qing;
+    display:inline-block;
+}
+.head a:hover{
+    color: $qing;
+}
+/*主区域*/
+.content{
+    position: relative;
+}
+.left{
+    background: #111;
+    width: 200px;
+    float:left;
+    height: 400px;
+}
+.right{
+    padding-left: 200px;
+}
+.right-head{
+    height: 55px;
+}
+/*链接*/
+.site{
+    padding: 25px 0 23px 70px;
+    height: 141px;
+    background: #333;
+    color:#666;
+}
+.site a{
+    line-height: 30px;
+}
+.site h3{
+    color: #aaa;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 30px;
+}
+.site li{
+    padding: 0 24px;
+    float: left;
+}
+.row a{
+    display:block; 
+}
+.col{
+    max-width: 220px;
+}
+.col a{
+    margin-right: 20px;
+}
+/*尾*/
+.foot{
+    background-color: #d6d6d6;
+    padding: 34px 0 52px;
+    text-align: center;
+    color: #666;
+}
+.foot a{
+    padding: 0 6px 0 3px;
+}
+.foot div{
+    height: 40px;
+}
+.foot span{
+    color: #444;
+}

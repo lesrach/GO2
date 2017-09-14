@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/register.css">
+		<script src="js/jquery-1.12.4.js"></script>
+		<script src="js/register.js"></script>
+	</head>
+	<body>
+		<div class="head register-head">
+			<div class="main">
+				<div class="head-right">
+					<a href="">购途市场首页</a>
+					<a href="">在线客服</a>
+					<span>热线电话：4006611603 028-64911606</span>
+				</div>
+			</div>
+		</div>
+		<div class="logo">
+			<div class="main">
+				<div class="logobox">
+					<img src="images/images/go2_03.jpg">
+					<div class="message">
+						<h2>欢迎注册</h2>
+						<p>中国鞋类厂商货源市场/一双也批发</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="reg-content">
+			<div class="main">
+				<div class="reg-con-head">
+					<div class="reg-login">
+						<span>已有账号？</span>
+						<a href="login.html">我要登录</a>
+					</div>
+					<div class="rolebox selected">
+						<div class="role">
+							采购商
+						</div>
+						<div class="tipsymbol">
+							?
+							<div class="tip">
+								<p class="tiptext">	
+									淘宝店主及网商企业/个人注册成为采购商身份
+								</p>
+								<div class="arrow">
+									<img src="images/tips.png">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="rolebox">
+						<div class="role">
+							供应商
+						</div>
+						<div class="tipsymbol">
+							?
+							<div class="tip">
+								<p class="tiptext">	
+									鞋类生产企业及经销商/代理商/批发商统一注册身份为供应商
+								</p>
+								<div class="arrow">
+									<img src="images/tips.png">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="rolebox">
+						<div class="role">
+							代发商
+						</div>
+						<div class="tipsymbol">
+							?
+							<div class="tip">
+								<p class="tiptext">	
+									申请加入代发货物商团队
+								</p>
+								<div class="arrow">
+									<img src="images/tips.png">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="formbox clearfix">
+					<div class="buyer  clearfix">
+						<div class="con-box">
+							<form >
+								<div>
+									<label for="buyer-username">
+										<span>用户名</span>
+										<span class="must">*</span>
+									</label>
+									<input type="text" id="buyer-username" placeholder="请设置2-20位汉字，字母或数字的用户名">
+									<div class="info"></div>
+								</div>
+								<div>
+									<label for="buyer-password">
+										<span>设置密码</span>
+										<span class="must">*</span>
+									</label>
+									<input type="password" id="buyer-password" placeholder="请设置6-20位字母或数字的密码">
+									<div class="info"></div>
+								</div>
+								<div>
+									<label for="buyer-repassword">
+										<span>重复密码</span>
+										<span class="must">*</span>
+									</label>
+									<input type="password" id="buyer-repassword" placeholder="重复输入已设置的密码，两次密码要一致">
+									<div class="info"></div>
+								</div>
+								<div>
+									<label for="buyer-phone">
+										<span>手机号码</span>
+										<span class="must">*</span>
+									</label>
+									<input type="text" id="buyer-phone" placeholder="便于安全找回密码">
+									<div class="info"></div>
+								</div>
+								<div>
+									<label for="buyer-check">
+										<span>验证码</span>
+										<span class="must">*</span>
+									</label>
+									<input type="text" id="buyer-check" placeholder="请按右图填写">
+									<div class="checkimg"></div>
+									<a href="javascript:void(0)" class="changeimg">看不清楚，换一张</a>
+									<div class="info"></div>
+								</div>
+								<div>
+									<label for="buyer-note">
+										<span>短信验证码</span>
+										<span class="must">*</span>
+									</label>
+									<input type="text" id="buyer-note">
+									<button id="getnote">获取验证码</button>
+									<div class="info"></div>
+								</div>
+								<div>
+									<label for="buyer-qq">
+										<span>QQ号码</span>
+									</label>
+									<input type="text" id="buyer-qq" placeholder="请输入你的QQ号码">
+									<div class="info"></div>
+								</div>
+								<div>
+									<label for="buyer-email">
+										<span>邮箱地址</span>
+									</label>
+									<input type="text" id="buyer-email" placeholder="请输入你的邮箱地址">
+									<div class="info"></div>
+								</div>
+								<div class= "shopbox clearfix">
+									<label for="third-party">
+										<span>你的店铺</span>
+									</label>
+									<div class="shop">
+										<input type="checkbox" id="taobao"><label for="taobao">淘宝网店</label>
+										<input type="checkbox" id="wechat"><label for="wechat">微店店主</label>
+										<input type="checkbox" id="tmail"><label for="tmail">天猫商城</label>
+										<input type="checkbox" id="alibaba"><label for="alibaba">阿里巴巴</label><br />
+										<input type="checkbox" id="jd"><label for="jd">京东商城</label>
+										<input type="checkbox" id="derivative"><label for="derivative">手机微商</label>
+										<input type="checkbox" id="meilishuo"><label for="meilishuo">美丽说</label>
+										<input type="checkbox" id="mogujie"><label for="mogujie">蘑菇街</label><br />
+										<input type="checkbox" id="shop"><label for="shop">实体店主</label>
+										<input type="checkbox" id="any"><label for="any">随便逛逛</label>
+										<input type="text" placeholder="请输入第三方平台名称" id="third-party"><br>
+										<p class="info">可多选，便于系统为您推荐更适合的热销产品</p>
+									</div>
+								</div>
+								<div class="toleft">
+									<input type="radio" id="buyer-agreement">
+									<label for="buyer-agreement">
+										我已阅读并同意&lt&lt
+										<a href="">购途平台服务协议</a>
+										&gt&gt 
+									</label>
+								</div>
+								<div class="toleft">
+									<input type="submit" id="buyer-sub" value="提交">
+								</div>
+							</form>
+						</div>
+						<div class="mess">
+							<img src="images/register-lightning.jpg">
+						</div>
+					</div>
+					<div class="provider">
+						<div class="con-box">
+							<form>
+								<h3>账户信息</h3>
+								<div>
+									<label for="provider-username">
+										<span>用户名</span>
+										<span class="must">*</span>
+									</label>
+									<input type="text" id="provider-username" placeholder="请设置2-20位汉字，字母或数字的用户名">
+									<div class="info"></div>
+								</div>
+								<div>
+									<label for="provider-password">
+										<span>设置密码</span>
+										<span class="must">*</span>
+									</label>
+									<input type="password" id="provider-password" placeholder="请设置6-20位字母或数字的密码">
+									<div class="info"></div>
+								</div>
+								<div>
+									<label for="provider-repassword">
+										<span>重复密码</span>
+										<span class="must">*</span>
+									</label>
+									<input type="password" id="provider-repassword" placeholder="重复输入已设置的密码，两次密码要一致">
+									<div class="info"></div>
+								</div>
+								<div>
+									<label for="provider-GO2shop">
+										<span>GO2店铺地址</span>
+										<span class="must">*</span>
+									</label>
+									Http://<input type="text" id="provider-GO2shop" placeholder="请设置6-16位字母和数字，不可更改"> .go2.cn
+									<div class="toleft">店铺地址是您在GO2.cn上的真实地址，可进行直接输入地址访问</div>
+									<div class="info"></div>
+								</div>
+								<h3>联系信息</h3>
+								<div>
+									<label for="provider-shopname">
+										<span>商家名称</span>
+										<span class="must">*</span>
+									</label>
+									<input type="text" id="provider-shopname" placeholder="请输入你的厂名（汉字、字母或数字）">
+									<div class="info"></div>
+								</div>
+								<div>
+									<label for="provider-shopsite">
+										<span>档口地址</span>
+									</label>
+									<input type="text" id="provider-shopsite" placeholder="请输入门店地址方便（采购商/服务商）拿货">
+									<div class="info"></div>
+								</div>
+								<div>
+									<label for="provider-connect">
+										<span>联系人</span>
+										<span class="must">*</span>
+									</label>
+									<input type="text" id="provider-connect" placeholder="请填写真实姓名">
+									<div class="info"></div>
+								</div>
+								<div>
+									<label for="provider-phone">
+										<span>手机号码</span>
+										<span class="must">*</span>
+									</label>
+									<input type="text" id="provider-phone" placeholder="请输入您的手机号码">
+									<div class="info"></div>
+								</div>
+								<div>
+									<label for="provider-qq">
+										<span>QQ号码</span>
+									</label>
+									<input type="text" id="provider-qq" placeholder="请输入你的QQ号码">
+									<div class="info"></div>
+								</div>
+								<div>
+									<label for="provider-email">
+										<span>邮箱地址</span>
+									</label>
+									<input type="text" id="provider-email" placeholder="请输入你正确的邮箱地址">
+									<div class="info"></div>
+								</div>
+								<h3>公司信息</h3>
+								<div class="clearfix">
+									<label>
+										<span>经验性质</span>
+									</label>
+									<div class="shop">
+										<input type="radio" name="nature" id="factory">
+										<label for="factory">生产厂家</label>
+										<input type="radio" name="nature" id="facade">
+										<label for="facade">门市销售</label>
+										<input type="radio" name="nature" id="agent-bus">
+										<label for="agent-bus">经销代理</label>
+										<input type="radio" name="nature" id="person">
+										<label for="person">个人</label>
+										<div class="info"></div>
+									</div>
+								</div>
+								<div class="clearfix">
+									<label>
+										<span>生产规模</span>
+									</label>
+									<select id="provider-product">
+										<option>1-5人</option>
+										<option>5-20人</option>
+										<option>20-50人</option>
+										<option selected>50-100人</option>
+										<option>100-200人</option>
+										<option>200-500人</option>
+										<option>500人以上</option>
+									</select>
+									<div class="info"></div>
+								</div>
+								<div class="clearfix">
+									<label>
+										<span>发货设置</span>
+									</label>
+									<div class="shop">
+										<input type="radio" name="send" id="other" checked>
+										<label for="other">需要代发货</label>
+										<input type="radio" name="send" id="self">
+										<label for="self">自行发货</label>
+										<div class="info"></div>
+									</div>
+								</div>
+								<div class="clearfix">
+									<label>
+										<span>分销招募</span>
+									</label>
+									<div class="shop">
+										<input type="checkbox" name="provider-rule" id="provider-rule" checked>
+										<label for="provider-rule">
+											阅读并同意
+											<a href="">&lt&lt开通分销招募服务&gt&gt</a>
+											,为网销代理供货
+										</label><br>
+										<input type="checkbox" name="recruit" class="recruit" checked> 招募淘宝店主
+										<input type="checkbox" name="recruit" class="recruit" checked> 招募微店/微商
+										<input type="checkbox" name="recruit" class="recruit" checked> 招募实体店主
+										<div class="info"></div>
+									</div>
+								</div>
+								<div>
+									<label for="provider-check">
+										<span>验证码</span>
+										<span class="must">*</span>
+									</label>
+									<input type="text" id="provider-check" placeholder="请按右图填写">
+									<div class="checkimg"></div>
+									<a href="javascript:void(0)" class="changeimg">看不清楚，换一张</a>
+									<div class="info"></div>
+								</div>
+								<div class="toleft">
+									<input type="radio" id="provider-agreement">
+									<label for="provider-agreement">
+										我已阅读并同意&lt&lt
+										<a href="">购途平台服务协议</a>
+										&gt&gt 
+									</label>
+								</div>
+								<div class="toleft">
+									<input type="submit" id="provider-sub" value="提交">
+								</div>
+							</form>
+						</div>
+						<div class="mess">
+							<img src="images/register-lightning.jpg">
+							<div class="code">
+								<p>关注购途供应商服务,</p>
+								<p>动态全掌握，生意更好做。</p>
+								<img src="images/code_go2.jpg">
+								<p>打开微信“扫一扫”，即可关注！</p>
+							</div>
+						</div>
+					</div>
+					<div class="agent">
+						<div class="con-box">
+							<form>
+								<h3>账户信息</h3>
+								<div>
+									<label for="agent-username">
+										<span>用户名</span>
+										<span class="must">*</span>
+									</label>
+									<input type="text" id="agent-username" placeholder="请设置2-20位汉字，字母或数字的用户名">
+									<div class="info"></div>
+								</div>
+								<div>
+									<label for="agent-password">
+										<span>设置密码</span>
+										<span class="must">*</span>
+									</label>
+									<input type="password" id="agent-password" placeholder="请设置6-20位字母或数字的密码">
+									<div class="info"></div>
+								</div>
+								<div>
+									<label for="agent-repassword">
+										<span>重复密码</span>
+										<span class="must">*</span>
+									</label>
+									<input type="password" id="agent-repassword" placeholder="重复输入已设置的密码，两次密码要一致">
+									<div class="info"></div>
+								</div>
+								<h3>联系信息</h3>
+								<div>
+									<label for="agent-connect">
+										<span>联系人</span>
+										<span class="must">*</span>
+									</label>
+									<input type="text" id="agent-connect" placeholder="请填写真实姓名">
+									<div class="info"></div>
+								</div>
+								<div>
+									<label for="agent-phone">
+										<span>手机号码</span>
+										<span class="must">*</span>
+									</label>
+									<input type="text" id="agent-phone" placeholder="请输入您的手机号码">
+									<div class="info"></div>
+								</div>
+								<div>
+									<label for="agent-qq">
+										<span>QQ号码</span>
+									</label>
+									<input type="text" id="agent-qq" placeholder="请输入你的QQ号码">
+									<div class="info"></div>
+								</div>
+								<div>
+									<label for="agent-email">
+										<span>邮箱地址</span>
+									</label>
+									<input type="text" id="agent-email" placeholder="请输入你正确的邮箱地址">
+									<div class="info"></div>
+								</div>
+								<h3>公司信息</h3>
+								<div class="clearfix">
+									<label>
+										<span>服务性质</span>
+									</label>
+									<div class="shop">
+										<input type="radio" name="ser-nature" id="factory">
+										<label for="factory">团队</label>
+										<input type="radio" name="ser-nature" id="facade">
+										<label for="facade">公司</label>
+										<input type="radio" name="ser-nature" id="person">
+										<label for="person">个人</label>
+										<div class="info"></div>
+									</div>
+								</div>
+								<div>
+									<label for="agent-check">
+										<span>验证码</span>
+										<span class="must">*</span>
+									</label>
+									<input type="text" id="agent-check" placeholder="请按右图填写">
+									<div class="checkimg"></div>
+									<a href="javascript:void(0)" class="changeimg">看不清楚，换一张</a>
+									<div class="info"></div>
+								</div>
+								<div class="toleft">
+									<input type="radio" id="agent-agreement">
+									<label for="buyer-agreement">
+										我已阅读并同意&lt&lt
+										<a href="">购途平台服务协议</a>
+										&gt&gt 
+									</label>
+								</div>
+								<div class="toleft">
+									<input type="submit" id="agent-sub" value="提交">
+									<span>开通服务商资格需注册通过后进行实名认证，方可发布服务信息申请服务商认证，请根据服务规则提供相应认证材料</span>
+								</div>
+							</form>
+						</div>
+						<div class="mess">
+							<img src="images/df_03.png">
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="reg-foot">
+			<div class="main">
+				2015-2020 GO2.CN 购途选款 
+				<span>服务热线: </span>4006611603 028-64911606 
+				<span>QQ客服：</span>    
+				<a href="javascript:void(0)" class="splite splite-qq"></a>
+				<a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=l_fX8PilufT5" class="splite splite-email"></a>
+				ICP证号:川B2-20150238   
+			</div>
+		</div>	
+	</body>
+</html>
