@@ -28,20 +28,18 @@ gulp.task("html",function(){
 
 gulp.task("sass",function(){
 	gulp.src("sass/*.scss")
-		.pipe(sass())
-		.pipe(gulp.dest("dist/css"))
+		.pipe(sass({outputStyle: 'compact'}))
+		.pipe(gulp.dest("css"))
 		.pipe(livereload());
-})
+}) 
 
 gulp.task("watch",function(){
 	livereload.listen();
 	gulp.watch("sass/*.scss",["sass"]);
 	gulp.watch("html/*.html",["html"]);
 	gulp.watch("js/*.js",["js"]);
-	gulp.watch("css/*.css",["css"]);
 })
 
 
-//gulp.watch("")	
 //默认任务
 gulp.task("default",["js","css","html"]);

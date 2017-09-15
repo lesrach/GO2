@@ -1,13 +1,1 @@
-html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input,textarea,select{margin:0; padding:0;}
-a{text-decoration:none;}
-li{list-style:none;}
-img{display:block; border:0;}
-fieldset{border:0;}
-i,em{font-style:normal;}
-h1,h2,h3,h4,h5,h6,b,strong{font-weight:normal;}
-a,p,i,em,b,strong{font-size:12px; line-height:14px; }
-input{outline:none;}
-
-.clearfix:after{content:"."; height:0; font-size:0; clear:both; display:block; overflow:hidden; visibility:hidden;}
-
-.vcenter{vertical-align: middle; width: 0; height: 100%; display: inline-block;}
+body,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,html,img,input,legend,li,ol,p,select,textarea,ul{margin:0;padding:0}a{text-decoration:none}li{list-style:none}img{display:block;border:0}fieldset{border:0}em,i{font-style:normal}b,h1,h2,h3,h4,h5,h6,strong{font-weight:400}a,b,em,i,p,strong{font-size:12px;line-height:14px}input{outline:0}.clearfix:after{content:".";height:0;font-size:0;clear:both;display:block;overflow:hidden;visibility:hidden}.vcenter{vertical-align:middle;width:0;height:100%;display:inline-block}

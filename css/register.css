@@ -1,314 +1,129 @@
+@charset "UTF-8";
 /**************************注册页面****************************/
-.reg-content{
+.reg-con-head { padding-left: 47px; margin-top: 50px; }
 
-}
-.reg-con-head{
-	padding-left: 47px;
-	margin-top: 50px;
-}
-.rolebox{
-	border:1px solid #c4c4c4;
-	border-bottom: 0;
-	padding: 2px 16px;
-	display:inline-block;
-	margin-right: 15px;
-	background: #f6f6f6;
-	position: relative;
-}
-.selected .tipsymbol{
-	width: 12px;
-	height: 12px;
-	border-radius: 50%;
-	border: 1px solid;
-	position: absolute;
-	right: 6px;
-	line-height: 12px;
-	text-align: center;
-	top: 6px;
-	display: block;
-}
-.tipsymbol{
-	display: none;
-}
-.reg-con-head .selected{
-	background: #fff;
-	margin-bottom: -2px;
-	color: #ff6700;
-}
-.reg-con-head .selected .role{
-	border-bottom: 3px solid #ff6700;
-	padding: 7px 12px;
-}
-.selected:hover .tip{
-	display: block;
-}
-.tip{
-	position: absolute;
-	top:-32px;
-	left:-24px;
-	display: none;
-}
-.tiptext{
-	background: #ffa115;
-	color: #fff;
-	padding: 0 10px;
-	line-height: 20px;
-	white-space: nowrap;
-}
-.arrow{
-	margin-left: 36px;
-}
-.role{
-	padding: 8px 12px;
-	font-size: 20px; 
-}
-.reg-login{
-	float:right;
-	line-height: 47px;
-	height: 47px;
-}
-.reg-login a{
-	color: blue;
-	text-decoration: underline;
-}
-.formbox{
-	border: 1px solid #aaa;
-	height: auto;
-}
-.buyer,.provider,.agent{
-	display: none;
-}
-.buyer .con-box,.provider .con-box,.agent .con-box{
-	padding: 45px;
-	width: 750px;
-	float: left;
-	box-sizing:border-box;
-	border-right: 1px solid #aaa;
-}
-.con-box h3{
-	font-weight: bold;
-	font-size: 16px;
-	line-height: 40px;
-	border-bottom: 1px solid;
-	margin-bottom: 30px;
-	padding-left: 80px;
-}
-.con-box>form>div{
-	margin: 10px;
-}
-.con-box label{
-	width: 140px;
-	padding-right: 30px;
-	float: left;
-	color: #999;
-}
-.con-box label span{
-	float:right;
-}
-label span{
-	line-height: 35px;
-	font-size: 18px;
-	font-weight: bold;
-}
-.must{
-	color: #ff6700;
-	margin-right:10px;
-	line-height: 35px;
-}
-form input[type="text"],form input[type="password"]{
-	height: 35px;
-	width: 300px;
-	box-sizing:border-box;
-	padding:1px 10px;
-	border: 1px solid #666;
-	vertical-align: middle;
-}
-select{
-	display: inline-block;
-}
-.info{
-	height: 24px;
-	padding-left: 170px;
-	line-height: 24px;
-	width: 300px;
-}
-#buyer-check,#provider-check,#agent-check{
-	width: 145px;
-}
-.checkimg{
-	width: 200px;
-	height: 50px;
-	display: inline-block;
-	vertical-align: middle;
-}
-#buyer-note,#provider-note,#agent-note{
-	width: 160px;
-}
-#getnote{
-	background: #7f889b;
-	padding: 0 26px;
-	height: 35px;
-	line-height: 35px;
-	text-align: center;
-	border: 0;
-	outline: none;
-}
-.con-box form .shopbox{
-	margin: 20px 0;
-}
-.shop{
-	float: left;
-}
-.shop label{
-	float: none;
-	line-height: 35px;
-}
-.shop .info{
-	padding: 0;
-	color: #ff6700;
-}
-#provider-GO2shop{
-	width: 250px;
-}
-#third-party{
-	width: 160px;
-	height:25px;
-	border: 1px solid #666;
-	padding: 0 9px;
-}
-.toleft{
-	padding-left: 170px;
-}
-.toleft span{
-	width: 320px;
-	display: inline-block;
-	line-height: 17px;
-}
-#buyer-sub,#provider-sub,#agent-sub{
-	width: 133px;
-	height: 43px;
-	border: 1px solid #f46a00;
-	background: linear-gradient(to bottom,#ffbd00,#ff6d00);
-	border-radius: 4px;
-	font-size: 18px;
-	color: #fff
-}
-#buyer-agreement+label,#provider-agreement+label,#agent-agreement+label{
-	float: none;
-}
-.buyer .mess,.provider .mess{
-	padding: 30px;
-	height: 100%;
-	float: left;
-}
-.agent .mess{
-	float: left;
-}
-.mess .code{
-	margin:40px 0;
-	text-align: center;
-}
-.code p{
-	text-align: center;
-	font-size: 16px;
-	color: #333;
-	line-height: 24px;
-}
-.code img{
-	margin: 16px 0;
-	display: inline-block;
-}
-.reg-foot{
-	text-align: center;
-	margin-top: 90px;
-}
-.reg-foot .main{
-	padding: 27px 0;
-	border-top: 1px solid #aaa;
-}
-.reg-foot span{
-	color:#333;
-	font-weight: bold;
-}
+.rolebox { border: 1px solid #c4c4c4; border-bottom: 0; padding: 2px 16px; display: inline-block; margin-right: 15px; background: #f6f6f6; position: relative; }
+
+.selected .tipsymbol { width: 12px; height: 12px; border-radius: 50%; border: 1px solid; position: absolute; right: 6px; line-height: 12px; text-align: center; top: 6px; display: block; }
+
+.tipsymbol { display: none; }
+
+.reg-con-head .selected { background: #fff; margin-bottom: -2px; color: #ff6700; }
+
+.reg-con-head .selected .role { border-bottom: 3px solid #ff6700; padding: 7px 12px; }
+
+.selected:hover .tip { display: block; }
+
+.tip { position: absolute; top: -32px; left: -24px; display: none; }
+
+.tiptext { background: #ffa115; color: #fff; padding: 0 10px; line-height: 20px; white-space: nowrap; }
+
+.arrow { margin-left: 36px; }
+
+.role { padding: 8px 12px; font-size: 20px; }
+
+.reg-login { float: right; line-height: 47px; height: 47px; }
+
+.reg-login a { color: blue; text-decoration: underline; }
+
+.formbox { border: 1px solid #aaa; height: auto; }
+
+.buyer, .provider, .agent { display: none; }
+
+.buyer .con-box, .provider .con-box, .agent .con-box { padding: 45px; width: 750px; float: left; box-sizing: border-box; border-right: 1px solid #aaa; }
+
+.con-box h3 { font-weight: bold; font-size: 16px; line-height: 40px; border-bottom: 1px solid; margin-bottom: 30px; padding-left: 80px; }
+
+.con-box > form > div { margin: 10px; }
+
+.con-box label { width: 140px; padding-right: 30px; float: left; color: #999; }
+
+.con-box label span { float: right; }
+
+label span { line-height: 35px; font-size: 18px; font-weight: bold; }
+
+.must { color: #ff6700; margin-right: 10px; line-height: 35px; }
+
+form input[type="text"], form input[type="password"] { height: 35px; width: 300px; box-sizing: border-box; padding: 1px 10px; border: 1px solid #666; vertical-align: middle; }
+
+select { display: inline-block; }
+
+.info { height: 24px; padding-left: 170px; line-height: 24px; width: 300px; }
+
+#buyer-check, #provider-check, #agent-check { width: 145px; }
+
+.checkimg { width: 200px; height: 50px; display: inline-block; vertical-align: middle; }
+
+#buyer-note, #provider-note, #agent-note { width: 160px; }
+
+#getnote { background: #7f889b; padding: 0 26px; height: 35px; line-height: 35px; text-align: center; border: 0; outline: none; }
+
+.con-box form .shopbox { margin: 20px 0; }
+
+.shop { float: left; }
+
+.shop label { float: none; line-height: 35px; }
+
+.shop .info { padding: 0; color: #ff6700; }
+
+#provider-GO2shop { width: 250px; }
+
+#third-party { width: 160px; height: 25px; border: 1px solid #666; padding: 0 9px; }
+
+.toleft { padding-left: 170px; }
+
+.toleft span { width: 320px; display: inline-block; line-height: 17px; }
+
+#buyer-sub, #provider-sub, #agent-sub { width: 133px; height: 43px; border: 1px solid #f46a00; background: linear-gradient(to bottom, #ffbd00, #ff6d00); border-radius: 4px; font-size: 18px; color: #fff; }
+
+#buyer-agreement + label, #provider-agreement + label, #agent-agreement + label { float: none; }
+
+.buyer .mess, .provider .mess { padding: 30px; height: 100%; float: left; }
+
+.agent .mess { float: left; }
+
+.mess .code { margin: 40px 0; text-align: center; }
+
+.code p { text-align: center; font-size: 16px; color: #333; line-height: 24px; }
+
+.code img { margin: 16px 0; display: inline-block; }
+
+.reg-foot { text-align: center; margin-top: 90px; }
+
+.reg-foot .main { padding: 27px 0; border-top: 1px solid #aaa; }
+
+.reg-foot span { color: #333; font-weight: bold; }
+
 /* 配合JS */
-.con-box form .focus{
-	border: 2px solid #ff6700;
-	padding: 0px 9px;
-}
-.con-box form .error{
-	border: 2px solid #f00;
-	padding: 0px 9px;
-}
+.con-box form .focus { border: 2px solid #ff6700; padding: 0px 9px; }
+
+.con-box form .error { border: 2px solid #f00; padding: 0px 9px; }
+
 /***********************************登录页面*********************************/
-.login-content{
-	height: 410px;
-	background:url(../images/login_backend.jpg) no-repeat  center center;
-	background-size: cover;
-	margin-top: 50px;
-}
-.login-model{
-	float: right;
-	margin-top: 20px;
-	height: 340px;
-	padding: 15px;
-	background: #fff;
-}
-.login-model h2{
-	line-height: 40px;
-}
-.login-model p,.login-model p a{
-	line-height: 60px;
-}
-.login-model .focus{
-	border: 1px solid #ff6700;
-}
-.login-model .error{
-	border: 1px solid #f00;
-}
-.login-model span.focus,.login-model span.error{
-	border-right: 0;
-}
-.login-model .login-input .login-info{
-	line-height: 24px;
-	height: 24px;
-	color: red;
-}
-form .login-input input{
-	width: 272px;
-	height: 40px;
-	line-height: 38px;
-	border: 1px solid #666;
-	vertical-align: top;
-	padding: 0 6px;
-}
-.name-img,.password-img{
-	width: 38px;
-	height: 38px;
-	border: 1px solid #666;
-	border-right: 0;
-	display: inline-block;
-	vertical-align: top;
-}
-.login-input .login-code{
-	width: 90px;
-	height: 38px;
-	vertical-align: middle;
-}
-.codeimg{
-	width: 150px;
-	height: 50px;
-	display: inline-block;
-	vertical-align: middle;
-}
-.login-change{
-	vertical-align: middle;
-}
-#login-sub{
-	width: 328px;
-	height: 43px;
-	border: 1px solid #f46a00;
-	background: linear-gradient(to bottom,#ffbd00,#ff6d00);
-	border-radius: 4px;
-	font-size: 18px;
-	color: #fff
-}
+.login-content { height: 410px; background: url(../images/login_backend.jpg) no-repeat center center; background-size: cover; margin-top: 50px; }
+
+.login-model { float: right; margin-top: 20px; height: 340px; padding: 15px; background: #fff; }
+
+.login-model h2 { line-height: 40px; }
+
+.login-model p, .login-model p a { line-height: 60px; }
+
+.login-model .focus { border: 1px solid #ff6700; }
+
+.login-model .error { border: 1px solid #f00; }
+
+.login-model span.focus, .login-model span.error { border-right: 0; }
+
+.login-model .login-input .login-info { line-height: 24px; height: 24px; color: red; }
+
+form .login-input input { width: 272px; height: 40px; line-height: 38px; border: 1px solid #666; vertical-align: top; padding: 0 6px; }
+
+.name-img, .password-img { width: 38px; height: 38px; border: 1px solid #666; border-right: 0; display: inline-block; vertical-align: top; }
+
+.login-input .login-code { width: 90px; height: 38px; vertical-align: middle; }
+
+.codeimg { width: 150px; height: 50px; display: inline-block; vertical-align: middle; }
+
+.login-change { vertical-align: middle; }
+
+#login-sub { width: 328px; height: 43px; border: 1px solid #f46a00; background: linear-gradient(to bottom, #ffbd00, #ff6d00); border-radius: 4px; font-size: 18px; color: #fff; }

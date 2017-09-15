@@ -4,8 +4,8 @@ require(["config"],function(){
 			function setDate(){
 				var date = new Date();
 				$(".year").text(date.getFullYear());
-				$(".month").text(date.getMonth());
-				$(".date").text(date.getDate());
+				$(".month").text(add2(date.getMonth()));
+				$(".date").text(add2(date.getDate()));
 				$(".hour").text(add2(date.getHours()));
 				$(".minute").text(add2(date.getMinutes()));
 				$(".second").text(add2(date.getSeconds()));
