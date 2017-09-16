@@ -154,7 +154,14 @@ options{
 	width:
 	height:
 	container:
-	nextturn: //是否需要前后滑动样式
+	isnext: //是否需要前后滑动样式
+	iscircle:       //是否需要下面小圆圈样式
+	circlestyle：{
+		bgColor: #fff,
+		textAlign: "center",
+		bgHeight: 20,
+		clWidth：12，
+	}
 }
 */
 
@@ -169,9 +176,10 @@ function CarouselLR(options){
 	this.nextIndex = 1;
 	this.timer = null; // 计时器id
 	this.turn = true; // 开关，防止点击过快
-	this.nextturn = options.nextturn || false;  
+	this.isnext = options.isnext || false;  
+	this.iscircle = options.iscircle || true;
+	this.clstyle = options.circlestyle;
 	this.init();
-	
 }
 
 CarouselLR.prototype = {
@@ -209,7 +217,7 @@ CarouselLR.prototype = {
 // 前添加
 		var fimg = this.imgs[this.imgs.length-1],
 			_li = document.createElement("li");
-		_li.innerHTML = "<a href='"+ fimg.href +"' target='_blank><img src='"+ fimg.src +"' style='width:"+this.width+"px; height:"+this.height+"px;'></a>";
+		_li.innerHTML = "<a href='"+ fimg.href +"' target='_blank'><img src='"+ fimg.src +"' style='width:"+this.width+"px; height:"+this.height+"px;'></a>";
 		_ul.insertBefore(_li,$("li",_ul)[0]);
 // 前添加
 		var limg = this.imgs[0],
@@ -226,16 +234,30 @@ CarouselLR.prototype = {
 		})
 		this.container.appendChild(_container);
 /* 小圆点 */
-		var _pages = document.createElement("div");
-		_pages.className = "pages";
-		$(_pages).css({width:this.width+"px",zIndex:"3"});
-		for (var i = 0; i < len; i++) {
-			_pages.innerHTML += "<div class='"+ (i===0?"current":"") +"'></div>";
+		if(this.iscircle){
+			var _pages = document.createElement("div");
+			_pages.className = "pages";
+			$(_pages).css({width:this.width+"px",zIndex:"3"});
+			for (var i = 0; i < len; i++) {
+				_pages.innerHTML += "<div class='"+ (i===0?"current":"") +"'></div>";
+			}
+			this.circles = $("div", _pages); // 保存所有小圆点到对象属性中
+			this.container.appendChild(_pages);
 		}
-		this.circles = $("div", _pages); // 保存所有小圆点到对象属性中
-		this.container.appendChild(_pages);
+/* 给小圆点添加定制样式 */
+		if(this.clstyle){
+			$(".pages").css({
+				height: (this.clstyle.bgHeight || 20) +"px",
+				background : this.clstyle.bgColor || "rgba(0,0,0,0.3)" ,
+				textAlign: this.clstyle.textAlign || "left"
+			})
+			$(".pages div").css({
+				width: (this.clstyle.clWidth || 16) + "px",
+				height: (this.clstyle.clWidth || 16) + "px",
+			})
+		}	
 /* 上一页、下一页 */
-		if(!this.nextturn){
+		if(!this.isnext){
 			var _prev = document.createElement("div");
 			_prev.className = "prev";
 			_prev.innerText = "<";
@@ -260,23 +282,26 @@ CarouselLR.prototype = {
 			this.out();
 		});
 		/* 小圆点切换，事件委派 */
-		$(_pages).on( "click", (e) => {
-			e = e || event;
-			// 获取事件源对象
-			var src = e.target || e.srcElement;
-			// 判断
-			if (src !== _pages&& this.turn == true) {
-				// 获取当前点击小圆点的索引
-				var index = $.inArray(src,Array.from(this.circles))
-				if (this.currentIndex !== index) {
-					this.nextIndex = index;
-					this.move();
-					this.turn = false;
+		if(this.iscircle){
+			$(_pages).on( "click", (e) => {
+				e = e || event;
+				// 获取事件源对象
+				var src = e.target || e.srcElement;
+				// 判断
+				if (src !== _pages&& this.turn == true) {
+					// 获取当前点击小圆点的索引
+					var index = $.inArray(src,Array.from(this.circles))
+					if (this.currentIndex !== index) {
+						this.nextIndex = index;
+						this.move();
+						this.turn = false;
+					}
 				}
-			}
-		});
+			});
+		}
+		
 		/* 上/下一页切换 */
-		if(!this.nextturn){
+		if(!this.isnext){
 			$(_prev).on( "click", () => {
 				if(this.turn == true){
 					this.nextIndex = this.currentIndex - 1;
@@ -296,11 +321,13 @@ CarouselLR.prototype = {
 		//图片往下一个坐标移动
 		var _left = -1 * (this.nextIndex+1) * this.width ,
 			len = this.imgs.length;
-		// 当前显示红色背景样式小圆点去掉样式
-		this.circles[(this.currentIndex+len)%len].className = "";
-		// 即将显示红色背景样式小圆点设置样式
-		this.circles[(this.nextIndex+len)%len].className = "current";
-		// 修改currentIndex与nextIndex的值
+		if(this.iscircle){
+			// 当前显示红色背景样式小圆点去掉样式
+			this.circles[(this.currentIndex+len)%len].className = "";
+			// 即将显示红色背景样式小圆点设置样式
+			this.circles[(this.nextIndex+len)%len].className = "current";
+			// 修改currentIndex与nextIndex的值
+		}
 		this.currentIndex = this.nextIndex;
 		this.nextIndex++;
 		var that = this;
