@@ -182,8 +182,8 @@
 		</div>
 		<div class="banner2">
 			<div class="main clearfix">
-				<a href="http://lisi.go2.cn/?pos=a1.63940.1"><img src="/images/images/banner2-1.jgp" alt=""></a>
-				<a href="http://hongfei.go2.cn/?pos=a2.65032.2"><img src="/images/images/banner2-2.jgp" alt=""></a>
+				<a href="http://lisi.go2.cn/?pos=a1.63940.1"><img src="/images/images/banner2-1.jpg" alt=""></a>
+				<a href="http://hongfei.go2.cn/?pos=a2.65032.2"><img src="/images/images/banner2-2.jpg" alt=""></a>
 				<div id="banner2Cou"></div>
 			</div>
 		</div>
@@ -322,13 +322,108 @@
 								<a href="">MD</a>
 							</div>
 						</li>
+						<li>
+							<span>流行元素</span>
+							<span class="splite splite-2"></span>
+							<div class="pullbox-right">
+								<a href="">网状</a>
+								<a href="">松糕跟</a>
+								<a href="">流苏</a>
+								<a href="">水钻</a>
+								<a href="">粗跟</a>
+								<a href="">铆钉</a>
+								<a href="">T型带(脚背)</a>
+								<a href="">绣花</a>
+								<a href="">交叉绑带</a>
+								<a href="">罗马风格</a>
+							</div>
+						</li>
+						<li>
+							<span>款式</span>
+							<span class="splite splite-2"></span>
+							<div class="pullbox-right">
+								<a href="">豆豆鞋</a>
+								<a href="">玛丽珍鞋</a>
+								<a href="">丁字鞋</a>
+								<a href="">布洛克鞋</a>
+								<a href="">网面鞋</a>
+								<a href="">摇摇鞋</a>
+								<a href="">布鞋</a>
+								<a href="">乐福鞋</a>
+								<a href="">懒人鞋</a>
+								<a href="">松糕鞋</a>
+							</div>
+						</li>
 					</ul>
+				</div>
+				<div class="list-img">
+				   <a href="http://z.go2.cn?pos=www_welcome_1-1" target="_blank"><img src="/images/images/chara1.png"></a>
+                   <a href="http://www.go2.cn/lightning/?pos=www_welcome_1-2" target="_blank"><img src="/images/images/chara2.png"></a>
+                   <a href="http://www.go2.cn/special/132.html?pos=www_welcome_1-3" target="_blank"><img src="/images/images/chara3.gif"></a>
+                   <a href="http://www.go2.cn/leather/?pos=www_welcome_1-4" target="_blank"><img src="/images/images/chara4.png"></a>
+                   <a href="/gold/?pos=www_welcome_1-5" target="_blank"><img src="/images/images/chara5.png"></a>
 				</div>
 			</div>
 		</div>
 		<div class="content">
-			<div class="main">
-				
+			<div class="main clearfix">
+				<div class="section-box clearfix" id="recommend">
+					
+				</div>
+				<div class="create">
+					<a target="_blank" href="http://z.go2.cn" class="bg-qing">实力质造</a>
+                    <a target="_blank" href="http://z.go2.cn/newproduct">新品首发</a>
+                    <a target="_blank" href="http://z.go2.cn/supplier">实力厂商</a>
+               </div>
+				<div class="section-box clearfix" id="create">
+					
+				</div>
+				<div class="ad">
+					<a target="_blank" class="img-banner-first" href="http://www.go2.cn/special/133.html"><img  src="images/images/ad1.gif" alt="" />
+					</a> 
+				</div>
+				<div class="firsthand">
+					<a href="/firsthand" class="bg-orange">一手货源</a>
+                    <span class="fh-code-img">
+                    	<div class="imgbox">
+                    		<img src="/images/images/code_firsthand.png" alt="" width="138" height="138">
+                    	</div>
+                    </span>
+                    <a href="/firsthand" target="_blank">进入</a>
+                </div>
+				<div class="section-box clearfix" id="firsthand">
+					
+				</div>
+				<div class="ad2">
+					
+				</div>
+				<div class="clearfix">
+					<div class="choice">
+						<a href="" class="active">精选推荐</a>
+						<a href="/search/1?category_id=all&search_1=1&q=春夏新品" target="_blank">2017春夏新品</a>/
+	                    <a href="/tbhy" target="_blank">淘宝货源</a>/
+	                    <a href="/tmhy" target="_blank">天猫货源</a>/
+	                    <a href="/wdhy" target="_blank">微店货源</a>/
+	                    <a href="/mgjhy" target="_blank">蘑菇街货源</a>/
+	                    <a href="/mlshy" target="_blank">美丽说货源</a>/
+	                    <a href="/mtdhy" target="_blank">实体店货源</a>/
+	                    <a href="/dthy" target="_blank">地摊货源</a>/
+	                    <a href="/albbhy" target="_blank">1688货源</a>
+					</div>
+					<div class="choice2">
+						<a target="_blank" href="/three/" class="active">三日新款</a>
+						<a target="_blank" href="/popularity/" class="normol">七日人气</a>
+					</div>
+				</div>
+				<div class="clearfix">
+					<div id="choice"  class="clearfix">
+						
+					</div>
+					<div id="choice2">
+						<div id="three" class="clearfix"></div>
+						<div id="seven" class="clearfix" style="display:none;"></div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="footnav">
@@ -446,5 +541,157 @@
 				</div>
 			</div>
 		</div>
+		
+		<script type="text/html" id="recommend-temp">
+			<%
+				for(var i =0 ;i<products.length;i++){
+					var product = products[i];
+			%>
+				<div class="pro-box">
+					<a href="<%=product.href%>">
+						<img src="<%=product.src%>">
+					</a>
+					<div class="text">
+						<p>
+							<span>供货价</span>
+							<span class="price"><%=product.price%></span>
+							<span class="color-red">.00</span>
+						</p>
+						<p class="color-gray" title="<%=product.message%>"><%=product.message%></p>
+						<p class="name"><a href="<%=product.href%>"><%=product.name%></a></p>
+						<p>
+							<span class="<%=product.part1%> splite"></span>
+							<span class="<%=product.part2%> splite"></span>
+							<span class="<%=product.part3%> splite"></span>
+							<a href="javascript:void(0)" class="collect fr">收藏</a>
+						</p>
+					</div>
+					<div class="recommend-tag"></div>
+				</div>
+			<%
+				}
+			%>
+		</script>
+		<script type="text/html" id="create-temp">
+			<%
+				for(var i =0 ;i<products.length;i++){
+					var product = products[i];
+			%>
+				<div class="pro-box">
+					<a href="<%=product.href%>">
+						<img src="<%=product.src%>">
+					</a>
+					<div class="text-s">
+						<p>
+							<span>供货价</span>
+							<span class="price"><%=product.price%>.00</span>
+						</p>
+						<p class="texts-name"><a href="<%=product.href%>"><%=product.name%></a></p>
+					</div>
+					<div class="create-tag"></div>
+				</div>
+			<%
+				}
+			%>
+		</script>
+		<script type="text/html" id="firsthand-temp">
+			<%
+				for(var i =0 ;i<products.length;i++){
+					var product = products[i];
+			%>
+				<div class="pro-box">
+					<a href="<%=product.href%>">
+						<img src="<%=product.src%>">
+					</a>
+					<div class="text">
+						<p>
+							<span>供货价</span>
+							<span class="price"><%=product.price%></span>
+							<span class="color-red">.00</span>
+						</p>
+						<p class="color-gray" title="<%=product.message%>"><%=product.message%></p>
+						<p class="name"><a href="<%=product.href%>"><%=product.name%></a></p>
+						<p>
+							<span class="<%=product.part1%> splite"></span>
+							<span class="<%=product.part2%> splite"></span>
+							<span class="<%=product.part3%> splite"></span>
+							<a href="javascript:void(0)" class="collect fr">收藏</a>
+						</p>
+					</div>
+					<div class="recommend-tag"></div>
+				</div>
+			<%
+				}
+			%>
+		</script>
+		<script type="text/html" id="choice-temp">
+			<%
+				for(var i =0 ;i<products.length;i++){
+					var product = products[i];
+			%>
+				<div class="pro-box">
+					<a href="<%=product.href%>">
+						<img src="<%=product.src%>">
+					</a>
+					<div class="text-s">
+						<p>
+							<span>供货价</span>
+							<span class="price"><%=product.price%>.00</span>
+							<span class="splite fr <%=product.part1%>"></span>
+							<span class="splite fr <%=product.part1%>"></span>
+							<span class="splite fr <%=product.part1%>"></span>
+						</p>
+					</div>
+				</div>
+			<%
+				}
+			%>
+		</script>
+		<script type="text/html" id="seven-temp">
+			<%
+				for(var i =0 ;i<products.length;i++){
+					var product = products[i];
+			%>
+				<div class="pro-box">
+					<a href="<%=product.href%>">
+						<img src="<%=product.src%>">
+					</a>
+					<div class="text-s">
+						<p>
+							<span>供货价</span>
+							<span class="price"><%=product.price%>.00</span>
+							<span class="splite fr <%=product.part1%>"></span>
+							<span class="splite fr <%=product.part1%>"></span>
+							<span class="splite fr <%=product.part1%>"></span>
+						</p>
+					</div>
+				</div>
+			<%
+				}
+			%>
+		</script>
+		<script type="text/html" id="three-temp">
+			<%
+				for(var i =0 ;i<products.length;i++){
+					var product = products[i];
+			%>
+				<div class="pro-box">
+					<a href="<%=product.href%>">
+						<img src="<%=product.src%>">
+					</a>
+					<div class="text-s">
+						<p>
+							<span>供货价</span>
+							<span class="price"><%=product.price%>.00</span>
+							<span class="splite fr <%=product.part1%>"></span>
+							<span class="splite fr <%=product.part1%>"></span>
+							<span class="splite fr <%=product.part1%>"></span>
+						</p>
+					</div>
+				</div>
+			<%
+				}
+			%>
+		</script>
 	</body>
 </html>

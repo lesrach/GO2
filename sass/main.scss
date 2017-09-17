@@ -1,3 +1,6 @@
+$qing: #18bb9c; 
+$hui : #ccc;  
+
 body, html { font-size: 12px; color: #818181; }
 
 a { color: #9a9a9a; display: inline-block; }
@@ -12,9 +15,13 @@ a:hover { color: #ff6700; }
 
 .color-red { color: red; }
 
+.color-gray { color : gray; } 
+
 .bg-orange { background: #ff6700; }
 
 .bg-cyan { background: #4bb9c6; }
+
+.bg-red { background: #f00; }
 
 .fl { float: left; }
 
@@ -121,7 +128,9 @@ a:hover { color: #ff6700; }
 }
 /*搜索列表*/
 .index-list{
-	border-top:1px solid #ccc;
+	.main{
+		border-top:1px solid #ccc; 
+	}
 	h3{
 		width: 80px;
 		color: #ff6700;
@@ -134,7 +143,13 @@ a:hover { color: #ff6700; }
 		border:1px solid #ccc;
 		border-top:0;
 		a{
-			padding:0 10px;
+			padding:0 16px;
+		}
+	}
+	.list-img{
+		@extend .list-box;
+		a{
+			padding:6px;
 		}
 	}
 	.list-pro{
@@ -213,7 +228,7 @@ a:hover { color: #ff6700; }
 .fnav{
 	border-left:1px solid #aaa;
 	padding-left: 24px;
-	width: 80px;
+	width: 100px;
 	a{
 		display: block;
 		line-height: 24px;
@@ -283,3 +298,226 @@ a:hover { color: #ff6700; }
 .splite-pnow { background-position: -60px -240px; }
 
 .splite-pfocus { background-position: -60px -300px; }
+
+
+/**************************************主内容区域**********************************************/
+/*推荐*/
+#recommend{
+	margin: 20px 0;
+}
+.pro-box{
+	border: 1px solid #eee;
+	width:188px;
+	float: left;
+	margin:0 8px 8px 0;
+	position: relative;
+	.recommend-tag{
+		background: url(/images/images/recommend_ico.png);
+		width:44px;
+		height:43px;
+		position: absolute;
+		left:0;
+		top:0;
+	}
+	.create-tag{
+		@extend .recommend-tag;
+		background: url(/images/images/bussrecom_ico.png);
+		width: 60px;
+		height: 60px;
+	}
+	img{
+		width: 100%;	
+	}
+	.text{
+		padding: 0 8px;
+	}
+	.text-s{
+		padding:0 16px;
+		p{
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			.price{
+				color: $qing;
+				font-weight: bold;
+				font-size: 18px;
+			}
+		}
+		.texts-name{
+			border-top: 1px dashed #ccc	;
+			a{
+				color: #ccc;
+				&:hover{
+					color: $qing;
+				}
+			}
+		}
+	}
+	p{
+		line-height: 30px;
+		height: 30px;
+		color: #111;
+		width: 100%;
+		overflow: hidden;
+		white-space: nowrap;
+		box-sizing: border-box;
+		.price{
+			color: #f00;
+			font-weight: bold;
+			font-size: 18px;
+		}
+	}
+	.color-gray {
+		color: gray;
+	}
+	.name{
+		a{
+			color: blue;
+			&:hover{
+				color: #ff6700;
+			}
+		}
+	}
+	.collect{
+		border: 1px solid #ff6700;
+		color: #ff6700;
+		padding: 4px 6px;
+		border-radius: 2px;
+	}
+	&:hover{
+		border: 1px solid #ff6700;
+	}
+}
+
+/*实力质造*/
+.create{
+	margin:40px 0; 
+	border-bottom: 4px solid $qing;
+	a{
+		display: inline-block;
+		background: $hui;
+		width: 80px;
+		height: 36px;
+		text-align: center;
+		line-height:36px;
+		color:#333;
+		font-size:14px;
+	}
+	.bg-qing{
+		background: $qing;
+		color:#fff;
+	}
+	
+}
+#create .pro-box:hover{
+	border:1px solid $qing;
+}
+/*广告*/
+.ad{
+	margin:30px 0;
+}
+/*一手货源*/
+.firsthand{
+	margin:40px 0; 
+	border-bottom: 4px solid #ff6700;
+	a{
+		line-height: 40px;
+		height: 40px;
+		text-align: center;
+		width: 80px;
+	}
+	.bg-orange{
+		@extend a;
+		background: #ff6700;
+		color: #fff;
+		font-weight: bold;
+		&:hover{
+			color: #fff;
+		}
+	}
+	.fh-code-img{
+		display: inline-block;
+		vertical-align: bottom;
+		height: 40px;
+		width: 40px;
+		position: relative;
+		.imgbox{
+			position: absolute;
+			bottom: 0;
+			left: 40px;
+			display:none;
+			background: #fff;
+			padding: 20px;
+			border: 1px solid #ccc;
+		}
+		&:hover .imgbox{
+			display: block;
+		}
+	}
+}
+/*广告位2（轮播图）*/
+.ad2{
+	.pages{
+		div{
+			background: #ccc;
+		}
+		.current{
+			bacmground: #ff6700;
+		}
+	}
+}
+/*精选*/
+.choice{
+	width: 793px;
+	margin-top:30px;
+	border-bottom: 3px solid #f00;
+	float: left;
+	a{
+		color: #333;
+		line-height: 36px;
+		padding: 0 6px;
+		vertical-align: middle;
+	}
+	.active{
+		background: #f00;
+		color: #fff;
+		font-weight: bold;
+		width: 80px;
+		text-align: center;
+		font-size: 16px;
+		&:hover{
+			color: #fff;
+		}
+	} 
+}
+.choice2{
+	@extend .choice;
+	width: 397px;
+	.normol{
+		color: #fff;
+		font-weight: bold;
+		width: 80px;
+		background: $hui;
+		text-align: center;
+		font-size: 16px;
+		&:hover{
+			color: #fff;
+		}
+	}
+}
+#choice{
+	width:793px;
+	.choice-cou{
+		float: right;
+		margin-bottom: 8px; 
+	}
+}
+#choice2{
+	width:397px;
+}
+#choice,#choice2{ 
+	float: left;
+	.pro-box:hover{
+		border:1px solid #f00;
+	}
+}
