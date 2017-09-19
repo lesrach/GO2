@@ -88,13 +88,13 @@
 				<div class="formbox clearfix">
 					<div class="buyer  clearfix">
 						<div class="con-box">
-							<form >
+							<form action="../php/register.php" method="get">
 								<div>
 									<label for="buyer-username">
 										<span>用户名</span>
 										<span class="must">*</span>
 									</label>
-									<input type="text" id="buyer-username" placeholder="请设置2-20位汉字，字母或数字的用户名">
+									<input type="text" id="buyer-username" placeholder="请设置2-20位汉字，字母或数字的用户名" name="username">
 									<div class="info"></div>
 								</div>
 								<div>
@@ -102,7 +102,7 @@
 										<span>设置密码</span>
 										<span class="must">*</span>
 									</label>
-									<input type="password" id="buyer-password" placeholder="请设置6-20位字母或数字的密码">
+									<input type="password" id="buyer-password" placeholder="请设置6-20位字母或数字的密码" name="password">
 									<div class="info"></div>
 								</div>
 								<div>
@@ -118,7 +118,7 @@
 										<span>手机号码</span>
 										<span class="must">*</span>
 									</label>
-									<input type="text" id="buyer-phone" placeholder="便于安全找回密码">
+									<input type="text" id="buyer-phone" placeholder="便于安全找回密码" name="phone">
 									<div class="info"></div>
 								</div>
 								<div>
@@ -144,14 +144,14 @@
 									<label for="buyer-qq">
 										<span>QQ号码</span>
 									</label>
-									<input type="text" id="buyer-qq" placeholder="请输入你的QQ号码">
+									<input type="text" id="buyer-qq" placeholder="请输入你的QQ号码" name="qq">
 									<div class="info"></div>
 								</div>
 								<div>
 									<label for="buyer-email">
 										<span>邮箱地址</span>
 									</label>
-									<input type="text" id="buyer-email" placeholder="请输入你的邮箱地址">
+									<input type="text" id="buyer-email" placeholder="请输入你的邮箱地址" name="email">
 									<div class="info"></div>
 								</div>
 								<div class= "shopbox clearfix">
@@ -192,7 +192,7 @@
 					</div>
 					<div class="provider">
 						<div class="con-box">
-							<form>
+							<form action="../php/register.php" method="post">
 								<h3>账户信息</h3>
 								<div>
 									<label for="provider-username">
@@ -369,7 +369,7 @@
 					</div>
 					<div class="agent">
 						<div class="con-box">
-							<form>
+							<form action="../php/register.php" method="post">
 								<h3>账户信息</h3>
 								<div>
 									<label for="agent-username">

@@ -11,16 +11,67 @@
 		
 	</head>
 	<body>
+		<!-- 顶部滑动框 -->
+		<div class="top">
+			<div class="main">
+				<a href="/" class="">
+					<img src="/images/images/logo.png">
+				</a>
+				<div class="top-nav">
+					<a href="">首页</a><span>|</span>
+					<a href="">新款</a><span>|</span>
+					<a href="">实力质造</a><span>|</span>
+					<a href="">找货源</a><span>|</span>
+					<a href="">找厂商</a><span>|</span>
+					<a href="">一件代发</a>
+				</div>
+				<form action="" method="get" class="topform">
+					<input type="text" id="topsearch" class="splite splite-search" placeholder='直接输入"供应商&货号"可快速找货'/
+					><input type="submit" value="搜索" id="search"/>
+				</form>
+				<a href="/leather/" target="_blank">
+					<img src="/images/images/top_fast.jpg">
+				</a>
+			</div>
+		</div>
+		<!-- 左漂浮栏 -->
+		<div class="leftnav">
+			<a href="javascript:void(0)"><span>选款导航</span><span class="vcenter"></a>
+			<a href="javascript:void(0)"><span>实力质造</span><span class="vcenter"></a>
+			<a href="javascript:void(0)"><span>一手货源</span><span class="vcenter"></a>
+			<a href="javascript:void(0)"><span>精选推荐</span><span class="vcenter"></a>
+			<a href="javascript:void(0)"><span>三日新款</span><span class="vcenter"></a>
+			<a href="javascript:void(0)"><span>七日人气</span><span class="vcenter"></a>
+			<a href="javascript:void(0)"><span>真皮金牌</span><span class="vcenter"></a>
+			<a href="javascript:void(0)"><span>大货库存</span><span class="vcenter"></a>
+			<a href="javascript:void(0)"><span>网销货源</span><span class="vcenter"></a>
+			<a href="javascript:void(0)"><span>男鞋选款</span><span class="vcenter"></a>
+			<a href="javascript:void(0)"><span>源产货源</span><span class="vcenter"></a>
+			<a href="javascript:void(0)"><span>猜你喜欢</span><span class="vcenter"></a>
+		</div>
+		<!-- 右漂浮栏 -->
+		<div class="rightnav">
+			<a href="#" style="background:blue" class="rightnav1"><span>商家导航</span><span class="vcenter"></span></a>
+			<a href="#" class="rightnav2"><span>一件发步</span><span class="vcenter"></span></a>
+			<a href="#" class="rightnav3"><span>新手采购</span><span class="vcenter"></span></a>
+			<a href="#" class="rightnav4"><span>大宗采购</span><span class="vcenter"></span></a>
+			<a href="#" class="rightnav5"><span>客服</span><span class="vcenter"></span></a>
+			<a href="#" class="rightnav6"><span>官方微信</span><span class="vcenter"></span></a>
+			<a href="#" class="rightnav7"><span>一键代发</span><span class="vcenter"></span></a>
+			<a href="javascript:void(0)" class="rightnav8"></a>
+			<a href="javascript:void(0)" class="rightnav9"></a>
+		</div>
+		<!-- 顶部 -->
 		<div class="head">
 			<div class="main">
 				<div class="head-left">
 					<span>请先</span>
-					<a href="javascript:void(0)" id="login" class="color-orange">登录</a>
+					<a href="/html/login.html" id="login" class="color-orange">登录</a>
 					<span id="and">或</span>
-					<a href="javascript:void(0)" id="register">注册</a>
+					<a href="/html/register.html" id="register" target="_blank">免费注册</a>
 				</div>
 				<ul class="head-right">
-					<li><a href="/" class="color-orange">GO2购图首页</a></li>
+					<li><a href="/" class="color-orange">GO2购途首页</a></li>
 					<li><a href="">购商宝</a></li>
 					<li>
 						<span>客服</span> 
@@ -124,11 +175,13 @@
 				</ul>
 			</div>
 		</div>
+		<!-- 横幅1 -->
 		<div class="banner">
 			<div class="close">
 				X
 			</div>
 		</div>
+		<!-- 搜索区 -->
 		<div class="logo-search">
 			<div class="main">
 				<a href="/" class="logo-left">
@@ -148,6 +201,7 @@
 				</div>
 			</div>
 		</div>
+		<!-- 导航1 -->
 		<div class="nav">
 			<div class="main clearfix">
 				<a href="/" id="index"><span class="splite splite-3"></span>首页</a>
@@ -162,6 +216,7 @@
 				<a href="" class="navlast fr">公益购商学院</a>
 			</div>
 		</div>
+		<!-- 导航2 -->
 		<div class="f-s-box">
 			<div class="main">
 				<a href="">三日新款</a><span>|</span>
@@ -180,6 +235,7 @@
 				<a href="" class="f-s-ad">淘宝卖家如何快速赚到第一个30万</a>
 			</div>
 		</div>
+		<!-- 横幅2 -->
 		<div class="banner2">
 			<div class="main clearfix">
 				<a href="http://lisi.go2.cn/?pos=a1.63940.1"><img src="/images/images/banner2-1.jpg" alt=""></a>
@@ -187,6 +243,7 @@
 				<div id="banner2Cou"></div>
 			</div>
 		</div>
+		<!-- 物品列表 -->
 		<div class="index-list">
 			<div class="main">
 				<div class="list-box">
@@ -365,6 +422,7 @@
 				</div>
 			</div>
 		</div>
+		<!-- 主内容：商品内容 -->
 		<div class="content">
 			<div class="main clearfix">
 				<div class="section-box clearfix" id="recommend">
@@ -416,16 +474,87 @@
 					</div>
 				</div>
 				<div class="clearfix">
-					<div id="choice"  class="clearfix">
+					<div id="choice"  class="section-box clearfix">
 						
 					</div>
 					<div id="choice2">
-						<div id="three" class="clearfix"></div>
-						<div id="seven" class="clearfix" style="display:none;"></div>
+						<div id="three" class="section-box clearfix"></div>
+						<div id="seven" class="section-box clearfix" style="display:none;"></div>
 					</div>
+				</div>
+				<div class="cleafix">
+					<div class="gold">
+						<a href="/leather" target="_blank" class="active">真皮推荐</a>
+                        <a href="/gold" target="_blank" class="normol">金牌供应</a>
+                        <a href="/factory" target="_blank" class="normol">厂家直供</a>
+					</div>
+					<div class="mass">
+						<a href="/sufficient" target="_blank" class="active">有大货</a>
+                        <a href="/approval" target="_blank" class="normol">无忧退换</a>
+                        <a href="/leftover" target="_blank" class="normol">库存尾货</a>
+					</div>
+				</div>
+				<div class="clearfix">
+					<div id="goldbox"  class="clearfix">
+						<div id="fur" class="section-box clearfix"></div>
+						<div id="gold" class="clearfix" style="display:none;"></div>
+						<div id="supply" class="clearfix" style="display:none;"></div>
+					</div>
+					<div id="massbox">
+						<div id="mass" class="section-box clearfix"></div>
+						<div id="exchange" class="clearfix" style="display:none;"></div>
+						<div id="save" class="clearfix" style="display:none;"></div>
+					</div>
+				</div>
+				<div class="cleafix">
+					<div class="net">
+						<a href="/peripheral" target="_blank" class="active" style="width: 100px;">全部网供货源</a>
+                        <a href="/peripheral/1?sort=defaultSort&category_id=all" target="_blank" class="normol">女鞋</a>
+                        <a href="/peripheral/1?sort=defaultSort&category_id=20" target="_blank" class="normol">运动鞋</a>
+                        <a href="/peripheral/1?sort=defaultSort&category_id=19" target="_blank" class="normol">童鞋</a>
+                        <a href="/peripheral/1?sort=defaultSort&category_id=4" target="_blank" class="normol">童装</a>
+                        <a href="/peripheral/1?sort=defaultSort&category_id=3" target="_blank" class="normol">箱包</a>
+                        <a href="/peripheral/1?sort=defaultSort&category_id=18" target="_blank" class="normol">内衣</a>
+					</div>
+					<div class="man">
+						<a href="/sufficient" target="_blank" class="active">有大货</a>
+                    </div>
+				</div>
+				<div class="clearfix">
+					<div id="netbox"  class="clearfix">
+						<div id="net" class="section-box clearfix"></div>
+						<div id="women" class="clearfix" style="display:none;"></div>
+						<div id="sports" class="clearfix" style="display:none;"></div>
+						<div id="child" class="clearfix" style="display:none;"></div>
+						<div id="child-cloth" class="clearfix" style="display:none;"></div>
+						<div id="bag" class="clearfix" style="display:none;"></div>
+						<div id="undearwear" class="clearfix" style="display:none;"></div>
+					</div>
+					<div id="man" class="section-box clearfix"></div>
+				</div>
+				<div class="ad3">
+
+				</div>
+				<div class="source">
+					 <a href="javascript:void(0)">源产地货源</a>
+				</div>
+				<div class="section-box clearfix" id="source">
+
+				</div>
+				<div class="ad4">
+					  <a href="http://adwy.go2.cn?pos=www_welcome_8-1" target="_blank"><img src="/images/images/ad4-1.jpg" alt=""></a>
+                      <a href="http://z.go2.cn/?pos=www_welcome_8-2" target="_blank"><img src="/images/images/ad4-2.jpg" alt=""></a>
+				</div>
+				<div class="guess">
+					<div class="line"></div>
+					<h3>猜你喜欢</h3>
+				</div>
+				<div id="guess" class="section-box clearfix">
+
 				</div>
 			</div>
 		</div>
+		<!-- 底部导航1 -->
 		<div class="footnav">
 			<div class="main">
 				<ul>
@@ -469,6 +598,7 @@
 				</ul>
 			</div>
 		</div>
+		<!-- 底部导航1 -->
 		<div class="footnav2">
 			<div class="main">
 				<div>
@@ -518,39 +648,43 @@
 				</div>
 			</div>
 		</div>
+		<!-- 尾信息 -->
 		<div class="footer">
-			<div class="main">
-				<div class="footlink">
-					<a href="">关于购途</a><span>|</span>
-					<a href="">购途准则</a><span>|</span>
-					<a href="">帮助中心</a><span>|</span>
-					<a href="">联系我们</a><span>|</span>
-					<a href="">采购流程</a><span>|</span>
-					<a href="">人才招聘</a><span>|</span>
-					<a href="">友情链接</a>
-				</div>
-				<div class="message">
-					<span>2015-2020 GO2.CN 购途选款  服务热线：</span>
-					<span class="foot-tel"> 400 6611 603&nbsp;&nbsp;&nbsp;&nbsp;028-64911606</span>
-					<span>QQ客服：</span>
-					<a href="" class="splite splite-1"></a>
-					<span>ICP证号：川B2-20150238</span>
-					<a href="" class="splite splite-8"></a
-					><a href="" class="splite splite-9"></a>
-					<span>网站统计</span>          
-				</div>
+			
+		</div>
+		<!-- 确认框 -->
+		<div class="tocart">
+			<div class="cartbox">
+				<p class="mess">
+					商品已成功添加到进货单!
+					<a href="/html/cart.html" title="">查看进货单&gt&gt&gt</a>
+				</p>
+				<button class="alertclose">X</button>
+				<button class="know">知道了</button>
 			</div>
 		</div>
-		
+		<!-- 模板字符串 -->
 		<script type="text/html" id="recommend-temp">
 			<%
 				for(var i =0 ;i<products.length;i++){
 					var product = products[i];
 			%>
 				<div class="pro-box">
-					<a href="<%=product.href%>">
-						<img src="<%=product.src%>">
-					</a>
+					<div class="imgbox">
+						<a href="<%=product.href%>">
+							<img src="<%=product.src%>">
+						</a>
+						<div class="share">
+							<a href="">传淘宝</a>
+							<a href="javascript:void(0)" class="addcart">加入进货单</a>
+							<a href="">一件代发</a>
+						</div>
+						<div class="pro-mess">
+							<p class="phone"><%=product.phone%></p>
+							<p class="qq"><%=product.qq%></p>
+							<p class="site"><%=product.site%></p>
+						</div>
+					</div>
 					<div class="text">
 						<p>
 							<span>供货价</span>
@@ -578,9 +712,21 @@
 					var product = products[i];
 			%>
 				<div class="pro-box">
-					<a href="<%=product.href%>">
-						<img src="<%=product.src%>">
-					</a>
+					<div class="imgbox">
+						<a href="<%=product.href%>">
+							<img src="<%=product.src%>">
+						</a>
+						<div class="share">
+							<a href="">传淘宝</a>
+							<a href="javascript:void(0)" class="addcart">加入进货单</a>
+							<a href="">一件代发</a>
+						</div>
+						<div class="pro-mess">
+							<p class="phone"><%=product.phone%></p>
+							<p class="qq"><%=product.qq%></p>
+							<p class="site"><%=product.site%></p>
+						</div>
+					</div>
 					<div class="text-s">
 						<p>
 							<span>供货价</span>
@@ -600,9 +746,21 @@
 					var product = products[i];
 			%>
 				<div class="pro-box">
-					<a href="<%=product.href%>">
-						<img src="<%=product.src%>">
-					</a>
+					<div class="imgbox">
+						<a href="<%=product.href%>">
+							<img src="<%=product.src%>">
+						</a>
+						<div class="share">
+							<a href="">传淘宝</a>
+							<a href="javascript:void(0)" class="addcart">加入进货单</a>
+							<a href="">一件代发</a>
+						</div>
+						<div class="pro-mess">
+							<p class="phone"><%=product.phone%></p>
+							<p class="qq"><%=product.qq%></p>
+							<p class="site"><%=product.site%></p>
+						</div>
+					</div>
 					<div class="text">
 						<p>
 							<span>供货价</span>

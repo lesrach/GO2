@@ -4,11 +4,22 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="/css/reset.css">
-		<link rel="stylesheet" type="text/css" href="/css/manage.css">
+		<link rel="stylesheet" type="text/css" href="/css/cart.css">
 		<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
-		<script src="/js/lib/requirejs/require.js" data-main="/js/manage"></script>
+		<script src="/js/lib/requirejs/require.js" data-main="/js/cart"></script>
 	</head>
 	<body>
+		<!-- 弹出框 -->
+		<div class="alertbox">
+			<div class="alert">
+				<h3>信息 <a href="javascript:void(0)" class="fr al-cancel">x</a></h3>
+				<div>
+					<p class="info">确定要清空进货单</p>
+					<button class="cancel fr">取消</button>
+					<button class="sure fr">确认</button>
+				</div>
+			</div>
+		</div>
 		<div class="head">
 			<div class="fl">
 				<span class="glyphicon glyphicon-user userhead"></span>
@@ -36,7 +47,7 @@
 					<span class="glyphicon glyphicon-user big-userhead"></span>
 					<div class="list-message">
 						<p class="username">lesrach</p>
-						<p class="tel">13333333</p>
+						<p class="phone">13333333</p>
 					</div>
 				</div>
 				<div class="list-block click list-focus">
@@ -86,60 +97,15 @@
 						<a href="" class="fl">全部(<span id="all">0</span>)</a>
 						<a href="" class="fl">尾货(<span id="less">0</span>)</a>
 						<a href="" class="fl">异常的(<span id="wrong">0</span>)</a>
-						<a href="" class="fr clean"><span class="glyphicon glyphicon-trash"></span>清空进货单</a>
+						<a href="javascript:void(0)" class="fr clean"><span class="glyphicon glyphicon-trash"></span>清空进货单</a>
 					</div>
 					<div class="control">
 						<input type="checkbox" id="selectall"> <label for="selectall">全选</label>
 						<button id="downall">批量下载数据包</button>
 						<button id="deleteall">批量删除</button>
 					</div>
-					<div class="cartbox">
-						<div class="product">
-							<div class="pro-block">
-								<div class="pro-box">
-									<a href="">淘宝发布</a>
-									<a href="">下载数据包</a>
-									<a href="">更多发表</a>
-								</div>
-								<span class="vcenter"></span>
-								<button class="glyphicon glyphicon-remove remove"></button>
-							</div>
-							<div class="pro-block">
-								<div class="pro-box">
-									<span>毛利率</span>
-									<p>--</p>
-								</div>
-								<span class="vcenter"></span>
-							</div>
-							<div class="pro-block">
-								<div class="pro-box">
-									<span>建议零售价</span>
-									<p>--</p>
-								</div>
-								<span class="vcenter"></span>	
-							</div>
-							<div class="pro-block">
-								<div class="pro-box">
-									<span>拿货价</span>
-									<p class="price">￥128</p>
-								</div>
-								<span class="vcenter"></span>
-							</div>
-							<div class="pro-block">
-								<span class="attr">正常</span>
-								<span class="vcenter"></span>
-							</div>
-							<div class="pro-mess">
-								<input type="checkbox" class="choose">
-								<img src="/images/images/product.jpg" alt="">
-								<div class="pro-message">
-									<a href="" class="name">欧拉欧拉</a>
-									<p class="phone">电话：18258133300</p>
-									<p class="qq">QQ：18258133300</p>
-									<p class="pro-site">地址：国际商贸城3区2楼8街21791号</p>
-								</div>
-							</div>
-						</div>
+					<div id="cartbox">
+						
 					</div>
 				</div>
 			</div>
@@ -218,5 +184,60 @@
 				 <a href="">网站统计</a> 
 			</div>	
 		</div>
+		<script type="text/html" id="pro-temp">
+			
+				<%
+					for(var i=0; i<products.length; i++){
+					var product = products[i];
+				%>
+
+					<div class="product">
+						<div class="pro-block">
+							<div class="pro-box">
+								<a href="">淘宝发布</a>
+								<a href="">下载数据包</a>
+								<a href="">更多发表</a>
+							</div>
+							<span class="vcenter"></span>
+							<button class="glyphicon glyphicon-remove remove"></button>
+						</div>
+						<div class="pro-block">
+							<div class="pro-box">
+								<span>毛利率</span>
+								<p>--</p>
+							</div>
+							<span class="vcenter"></span>
+						</div>
+						<div class="pro-block">
+							<div class="pro-box">
+								<span>建议零售价</span>
+								<p>--</p>
+							</div>
+							<span class="vcenter"></span>	
+						</div>
+						<div class="pro-block">
+							<div class="pro-box">
+								<span>拿货价</span>
+								<p class="price">￥<%= product.price%></p>
+							</div>
+							<span class="vcenter"></span>
+						</div>
+						<div class="pro-block">
+							<span class="attr">正常</span>
+							<span class="vcenter"></span>
+						</div>
+						<div class="pro-mess">
+							<input type="checkbox" class="choose">
+							<img src="<%= product.src%>" alt="">
+							<div class="pro-message">
+								<a href="" class="name"><%= product.name%></a>
+								<p class="phone">电话：<%= product.phone%></p>
+								<p class="qq">QQ：<%= product.qq%></p>
+								<p class="pro-site">地址：<%= product.site%></p>
+							</div>
+						</div>
+					</div>
+				<%}%>	
+		</script>
 	</body>
 </html>
