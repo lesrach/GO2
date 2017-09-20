@@ -58,6 +58,28 @@ require(["config"],function(){
 			$(".rightnav8").click(function(){
 				$("html,body").animate({scrollTop:0},0);
 			})
+			$(".buy").click(function(){
+				var product = {
+					name: $(".name").html(),
+					price: $("#price").html(),
+					phone: $(".phone").html(),
+					qq: $(".qq").html(),
+					site: $(".ssite").html(),
+					src: $(".imgbox img").prop("src"),
+					builder: $(".header").html().trim(),
+					color: $(".color.focus").html(),
+					size: $(".stand.focus").html()
+				}
+				$.cookie("pro-clean",JSON.stringify(product),{expires:30,path:"/"})
+			})
+			$(".stand").click(function(){
+				$(".stand.focus").removeClass('focus');
+				$(this).addClass("focus");
+			})
+			$(".color").click(function(){
+				$(".color.focus").removeClass('focus');
+				$(this).addClass("focus");
+			})
 			function delay(){
 				$(".addcart").on("click",function() {
 					var par = $(this).parents(".pro-box"),

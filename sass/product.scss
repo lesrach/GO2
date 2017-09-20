@@ -319,12 +319,15 @@ a:hover{
 			background: #ff6700;
 			color: #fff;
 			margin-bottom: 10px;
+			line-height: 40px; 
+			display: block;
 		}
 		.totb{
 			@extend .buy;
 			background: #f00;
 			width: 108px;
 			margin-right: 5px;
+			display: inline-block;
 		}
 		.down{
 			@extend .totb;
@@ -345,6 +348,10 @@ a:hover{
 			&:hover{
 				color: blue;
 			}
+		}
+		.focus{
+			color: #f00;
+			border: 1px solid #f00;
 		}
 	}
 }

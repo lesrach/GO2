@@ -1,6 +1,6 @@
 var code,codesrc;
 require(["config"],function(){
-	require(["jquery"],function(){
+	require(["jquery","cookie"],function($,cookie){
 		$(function(){
 			$("#login-username").focus(function(){
 				this.className = "focus";
@@ -41,6 +41,7 @@ require(["config"],function(){
 			})
 			$("#login-sub").click(function(e){
 				e.preventDefault();
+				var exit = false;
 				if($("#login-username")[0].value ==""){
 					$("#login-username").nextAll(".login-info")[0].innerHTML= "请输入用户名";
 					$("#login-username")[0].className = "error"; 
@@ -57,8 +58,25 @@ require(["config"],function(){
 				}
 				$(".login-info").each(function(index,curr){
 					if(curr.innerHTML!=""){
-						e.preventDefault();
-						return;
+						exit = true;
+					}
+				})
+				if(exit){
+					return;
+				}
+				console.log("send");
+				$.ajax({
+					url: "http://localhost/go2/php/login.php",
+					type: "get",
+					dataType:"json",
+					data: "username=" +  $("#login-username").val() +"&password=" + $("#login-password").val(),
+					success: function(data){
+						console.log(data);
+						if(data.status == 1){
+							$.cookie("islogin",true,{expires:30,path:"/"});
+							$.cookie("username",$("#login-username").val(),{expires:30,path:"/"});
+							location = "/index.html";
+						}
 					}
 				})
 			})

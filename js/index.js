@@ -7,7 +7,11 @@ require(["config"],function(){
 			var islogin = $.cookie("islogin"),
 				un = $.cookie("username");
 			if(islogin){
-				$(".handleft").html(`你好<a href="#" class="color-orange">${un}</a><a href="#">个人中心</a><a>退出</a> `);
+				$(".head-left").html(`你好<a href="#" class="color-orange">${un}</a><a href="#">个人中心</a><a class="exit">退出</a> `);
+				$(".exit").click(function(event) {
+					$.cookie("islogin",false,{expires:30,path:"/"});
+					location = "/index.html";
+				});
 			}
 			/*加载尾部*/
 			$(".footer").load("/html/model/footer.html");
@@ -198,9 +202,11 @@ require(["config"],function(){
 				$("#source").html(sourcehtml);
 				$("#netbox div").html(furhtml);
 				$("#man").html(masshtml);
+				$("#guess li").eq(4).html(guess1html);
 				$("#guess li").eq(1).html(guess1html);
 				$("#guess li").eq(2).html(guess2html);
 				$("#guess li").eq(3).html(guess3html);
+				$("#guess li").eq(0).html(guess3html);
 				/*choice区块 添加新的轮播图*/
 				$("<div></div>").addClass('choice-cou fr').prependTo('#choice');
 				new CarouselLR({

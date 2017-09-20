@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>导入订单</title>
+		<link rel="stylesheet" type="text/css" href="/css/cleaning.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/iconfont/iconfont.css">
+		<script src="/js/lib/requirejs/require.js" data-main="/js/cleaning"></script>
+	</head>
+	<body>
+		<div class="mess">
+			<div class="header">
+				<img src="/images/head-avatar.png" alt="">
+				<p class="username">lesrach</p>
+			</div>
+			<a href="javascript:void(0)" title="">我的工作平台</a>
+			<a href="javascript:void(0)" title=""><span class="iconfont icon-dingdan-copy"></span>订单</a>
+			<a href="javascript:void(0)" title=""><span class="iconfont icon-dayin"></span>打印</a>
+			<a href="javascript:void(0)" title=""><span class="iconfont icon-daizi"></span>商品</a>
+			<a href="javascript:void(0)" title=""><span class="iconfont icon-search"></span>找货</a>
+			<a href="javascript:void(0)" title=""><span class="iconfont icon-jingyingzhibiao"></span>经营</a>
+			<a href="javascript:void(0)" title=""><span class="iconfont icon-zijin"></span>资金</a>
+			<a href="javascript:void(0)" title=""><span class="iconfont icon-setting"></span>设置</a>
+		</div>
+		<div class="product">
+			<div class="head">
+				<a href="/index.html" title="" class="fl">
+					<img src="/images/images/logo.png" alt="">
+				</a>
+				<a href="" title="" class="fr iconfont icon-tuichu"></a>
+				<a href="" title="" class="fr iconfont icon-xinshourenwu"></a>
+				<a href="" title="" class="fr iconfont icon-zhanghaoanquan"></a>
+			</div>
+			<div class="content">
+				<div class="tip">
+					<span class="iconfont icon-jinggao-copy"></span>
+					<div class="tiptext">
+						<p>1. 如果无法创建发货单，请检查订单货号是否填写，“货号”保持与厂家商品编码（厂商名称&货号）一致，便于厂家和代发商发货；</p>
+						<p>2. 将淘宝（其它平台）订单中的收货地址直接复制粘贴到“收件地址匹配”框中，点击【一键识别地址】系统将此地址拆分显示在对应的信息中！</p>
+						<p>3. 选择发货商后，点击【提交并支付】按钮，系统才会记录订单数据并发送给发货商。
+						</p>
+					</div>
+				</div>
+				<div class="request">
+					已成功导入订单
+					<span class="pro-kind color-red">1</span>
+					个，预计
+					<span class="pro-count color-red">138</span>
+					元  请仔细核对每个订单，并选择发货商以及是否添加礼品
+					<a class="fr iconfont icon-lajitong" href="javascript:void(0)"></a>
+				</div>
+				<div class="message">
+					<div class="mess-head">
+						<div class="num">1</div>
+						<p>商品数量：<span class="pro-num">1</span></p>
+						<p>贷款：<span class="price">138</span>.00</p>
+						<p>服务费：<span class="server-p">0</span>.00</p>
+						<p>质检费：<span class="check-p">0</span>.00</p>
+						<p>快递费：<span class="send-p">0</span>.00</p>
+						<p>礼品费：<span class="gift-p">0</span>.00</p>
+						<p>订单总价：<span class="count">138</span>.00</p>
+					</div>
+					<div class="mess-details">
+						<div>
+							<input type="text" name="name" class="pro-name must w150" placeholder="货号">
+							<input type="text" name="name" class="color must w70" placeholder="颜色">
+							<input type="text" name="name" class="size must w70" placeholder="尺码">
+							<input type="text" name="name" class="num must w70" placeholder="数量">
+							<input type="text" name="name" class="single-price must w100" placeholder="价格">
+							<input type="text" name="name" class="name must w100" placeholder="名字">
+							<input type="text" name="name" class="phone must w100" placeholder="手机号">
+							<input type="text" name="name" class="site must w300" placeholder="地址">
+						</div>
+						<div class="receive">
+							<span>收件人信息</span>注意:收件地址请按省/市/县详细填写以便准确计算快递费，否则以最低标准计算
+						</div>
+						<div>
+							<div class="title clearfix">
+								<span class="fr">收件地址匹配</span>
+							</div>
+							<input type="text" name="re-site" class="re-site need w800" placeholder="将淘宝订单中的收件地址直接复制粘贴到此处，如：张三，17828173307，四川省 成都市 高新区 国际商贸城3区2楼12836X号">
+						</div>
+						<div>
+							<div class="title clearfix">
+								<span class="fr">收件人</span>
+								<span class="fr color-red">*</span>
+							</div>
+							<input type="text" name="re-man" class="re-man need w100">
+							<div class="title clearfix">
+								<span class="fr">电话</span>
+								<span class="fr color-red">*</span>
+							</div>
+							<input type="text" name="re-phone" class="re-phone need w100">
+							<div class="title clearfix">
+								<span class="fr">收货地址</span>
+								<span class="fr color-red">*</span>
+							</div>
+							<input type="text" name="re-site" class="re-site need w150">
+						</div>
+						<div>
+							<div class="title clearfix">
+								<span class="fr">订单备注</span>
+							</div>
+							<input type="text" name="remark" class="remark w800">
+						</div>
+						<div class="receive">
+							<span>选择发货时及快递</span>
+						</div>
+						<div>
+							<div class="title clearfix">
+								<input type="radio" name="choose" class="fr" style="height:40px; margin: 0 6px;" checked>
+								<span class="fr">代发商发货</span>
+							</div>
+							<select>
+								<option>请选择代发商</option>
+								<option>宝驹</option>
+								<option>放心代发</option>
+								<option>熊猫代发</option>
+								<option>飞速</option>
+							</select>
+							<div class="info">
+								选择代发商发货享受：专人质检，发货速度快，货品更安全，退换无忧，100%透明物流信息，推荐使用！
+							</div>
+						</div>
+						<div>
+							<div class="title clearfix">
+								<input type="radio" name="choose" class="fr"  style="height:40px; margin: 0 6px;" disabled>
+								<span class="fr">厂家发货</span>
+							</div>
+							<select disabled>
+								<option>请选择代发商</option>
+							</select>
+							<span class="remind color-red">该厂家未开通发货功能，如若需要请联系厂家开通发货功能！</span>
+							<div class="info">
+								选择代发商发货享受：专人质检，发货速度快，货品更安全，退换无忧，100%透明物流信息，推荐使用！
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				共<div class="pro-kind">1</div>单
+				<p>商品数量：<span class="pro-num">1</span></p>
+				<p>贷款：<span class="price">138</span>.00</p>
+				<p>服务费：<span class="server-p">0</span>.00</p>
+				<p>质检费：<span class="check-p">0</span>.00</p>
+				<p>快递费：<span class="send-p">0</span>.00</p>
+				<p>礼品费：<span class="gift-p">0</span>.00</p>
+				<p>合计金额：<span class="count color-red">138</span>.00</p>
+				<a href="javascript:void(0)" title="" class="submit fr">提交并支付</a>
+				<a href="javascript:void(0)" title="" class="continue fr">[继续创建发货单]</a>
+			</div>
+		</div>
+	</body>
+</html>

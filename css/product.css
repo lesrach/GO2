@@ -146,9 +146,9 @@ a:hover { color: #ff6700; }
 
 .product-left .pro-control .stand { text-align: center; border: 1px solid #666; padding: 0 3px; }
 
-.product-left .pro-control .buy, .product-left .pro-control .totb, .product-left .pro-control .down, .product-left .pro-control .tofri, .product-left .pro-control .issuing { width: 461px; height: 40px; text-align: center; border: 0; background: #ff6700; color: #fff; margin-bottom: 10px; }
+.product-left .pro-control .buy, .product-left .pro-control .totb, .product-left .pro-control .down, .product-left .pro-control .tofri, .product-left .pro-control .issuing { width: 461px; height: 40px; text-align: center; border: 0; background: #ff6700; color: #fff; margin-bottom: 10px; line-height: 40px; display: block; }
 
-.product-left .pro-control .totb, .product-left .pro-control .down, .product-left .pro-control .tofri, .product-left .pro-control .issuing { background: #f00; width: 108px; margin-right: 5px; }
+.product-left .pro-control .totb, .product-left .pro-control .down, .product-left .pro-control .tofri, .product-left .pro-control .issuing { background: #f00; width: 108px; margin-right: 5px; display: inline-block; }
 
 .product-left .pro-control .down { background: #c54240; }
 
@@ -159,6 +159,8 @@ a:hover { color: #ff6700; }
 .product-left .pro-control .link a { padding: 0 8px; line-height: 30px; border-right: 1px solid #333; }
 
 .product-left .pro-control .link a:hover { color: blue; }
+
+.product-left .pro-control .focus { color: #f00; border: 1px solid #f00; }
 
 .product-right { width: 218px; border: 1px solid #ffe2a3; box-sizing: border-box; float: left; }
 

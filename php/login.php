@@ -1,7 +1,7 @@
 <?php
-	header('Access-Control-Allow-Origin:*');  
-	$un = $_POST["username"];
-	$pw = $_POST["password"];
+	header ("Access-Control-Allow-Origin: *");
+	$un = $_REQUEST["username"];
+	$pw = $_REQUEST["password"];
 	mysql_connect("localhost:3306", "root", "");
 	mysql_select_db("lesrach");
 	$sql = "SELECT * FROM wodesql WHERE username = '$un' AND password = '$pw'";
