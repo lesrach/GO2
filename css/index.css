@@ -195,6 +195,8 @@ a:hover { color: #ff6700; }
 
 .banner2 a { display: block; float: left; }
 
+.banner2 #banner2Cou .pages { display: none; }
+
 /*搜索列表*/
 .index-list .main { border-top: 1px solid #ccc; }
 
@@ -216,7 +218,7 @@ a:hover { color: #ff6700; }
 
 .index-list .list-pro ul li .pullbox-right a, .index-list .list-pro ul li .pullbox-left a { display: inline-block; line-height: 30px; width: 80px; }
 
-.index-list .list-pro ul li .pullbox-left { right: -1px; }
+.index-list .list-pro ul li .pullbox-left { left: -366px; }
 
 /* 底部导航1*/
 .footnav { padding: 25px 0 23px; height: 140px; margin-top: 44px; background: #393939; }
