@@ -6,7 +6,7 @@ require(["config"],function(){
 			/*cookie*/
 			var islogin = $.cookie("islogin"),
 				un = $.cookie("username");
-			if(islogin){
+			if(islogin == "true"){
 				$(".head-left").html(`你好<a href="#" class="color-orange">${un}</a><a href="#">个人中心</a><a class="exit">退出</a> `);
 				$(".exit").click(function(event) {
 					$.cookie("islogin",false,{expires:30,path:"/"});
@@ -71,6 +71,22 @@ require(["config"],function(){
 			});
 			new CarouselLR({
 				imgs:[
+					{src:"/images/images/bannerrun-1.jpg",href:"http://http://mdst.go2.cn/?pos=go2_a4pos=a4.70416.1"},
+					{src:"/images/images/bannerrun-2.jpg",href:"http://jqlld.go2.cn/?pos=go2_a4pos=a4.70413.4"}
+				],
+				width:241,
+				height:135,
+				container:$("#banner2Cou")[0],
+				isnext:true,
+				circlestyle:{
+					bgColor: "transparent",
+					textAlign: "center",
+					bgHeight: 30,
+					clWidth: 12
+				}
+			});
+			new CarouselLR({
+				imgs:[
 					{src:"",href:""},
 					{src:"",href:""},
 					{src:"",href:""},
@@ -122,7 +138,7 @@ require(["config"],function(){
 			$(".leftnav a").on("click",function(){
 				var _index = $(this).index(),
 					_top = $(".section-box").eq(_index).offset().top;
-				$("html,body").animate({scrollTop:_top},0);
+				$("html,body").animate({scrollTop:_top-60},0);
 			})
 			$(".rightnav9").click(function(){
 				var _top = $(document).height();
@@ -207,6 +223,16 @@ require(["config"],function(){
 				$("#guess li").eq(2).html(guess2html);
 				$("#guess li").eq(3).html(guess3html);
 				$("#guess li").eq(0).html(guess3html);
+				/*模拟进入商品页*/
+				$(".pro-box").find("img").parent().click(function(e) {
+					e.preventDefault();
+					location = "/html/product.html";
+				});
+				/*模拟进入列表页*/
+				$(".index-list").find("a").click(function(e) {
+					e.preventDefault();
+					location = "/html/list.html";
+				});
 				/*choice区块 添加新的轮播图*/
 				$("<div></div>").addClass('choice-cou fr').prependTo('#choice');
 				new CarouselLR({
@@ -371,6 +397,7 @@ require(["config"],function(){
 					}
 				})
 			})
+
 		})
 	})
 })

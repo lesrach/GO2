@@ -1,6 +1,10 @@
 @charset "UTF-8";
 color-or { color: #ff6700; }
 
+form img { height: 36px; vertical-align: middle; }
+
+form input { vertical-align: middle; }
+
 /**************************注册页面****************************/
 .reg-con-head { padding-left: 47px; margin-top: 50px; }
 
@@ -54,7 +58,7 @@ select { display: inline-block; }
 
 #buyer-check, #provider-check, #agent-check { width: 145px; }
 
-.checkimg { width: 200px; height: 50px; display: inline-block; vertical-align: middle; }
+.checkimg { width: 200px; display: inline-block; vertical-align: middle; }
 
 #buyer-note, #provider-note, #agent-note { width: 160px; }
 
@@ -124,7 +128,7 @@ form .login-input input { width: 272px; height: 40px; line-height: 38px; border:
 
 .login-input .login-code { width: 90px; height: 38px; vertical-align: middle; }
 
-.codeimg { width: 150px; height: 50px; display: inline-block; vertical-align: middle; }
+.codeimg { width: 150px; display: inline-block; vertical-align: middle; }
 
 .login-change { vertical-align: middle; }
 

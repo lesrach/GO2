@@ -2,7 +2,18 @@ var istopshow = false;
 require(["config"],function(){
 	require(["jquery","cookie","template","animate"],function($,cookie,template){
 		$(function(){
-			$(".head").load("/html/model/header.html");
+			$(".head").load("/html/model/header.html",function(){
+				/*cookie*/
+				var islogin = $.cookie("islogin"),
+					un = $.cookie("username");
+				if(islogin == "true"){
+					$(".head-left").html(`你好<a href="#" class="color-or">${un}</a><a href="#">个人中心</a><a class="exit">退出</a> `);
+					$(".exit").click(function(event) {
+						$.cookie("islogin",false,{expires:30,path:"/"});
+						location = "/index.html";
+					});
+				}
+			});
 			$(".rightnav").load("/html/model/rightnav.html",function(){
 				$(".rightnav9").click(function(){
 					var _top = $(document).height();
@@ -16,6 +27,7 @@ require(["config"],function(){
 			$(".footnav").load("/html/model/footnav.html");
 			$(".footer").load("/html/model/footer.html");
 			var _width = Math.floor($(document).outerWidth());
+
 			new CarouselLR({
 				imgs:[
 					{src:"/images/banner1.jpg",href:"http://www.go2.cn/gold/"},
@@ -83,8 +95,20 @@ require(["config"],function(){
 					height: "12px",
 					borderRadius: "6px"
 				});
+				/*模拟进入商品页*/
+				$(".pro-box").find("img").parent().click(function(e) {
+					e.preventDefault();
+					console.log(1);
+					location = "/html/product.html";
+				});
+				/*模拟进入列表页*/
+				$(".section,.find").find("a").click(function(e) {
+					e.preventDefault();
+					location = "/html/list.html";
+				});
+				/*刷新排序*/
 			})
-			/*刷新排序*/
+
 			$(".all").click(function(event) {
 				$.getJSON("/json/list.json",function(data){
 					data = data.splice(0,30);

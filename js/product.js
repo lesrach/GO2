@@ -6,6 +6,17 @@ require(["config"],function(){
 				zoomWindowWidth:450,
            		zoomWindowHeight:450
 			});
+			/*cookie*/
+			var islogin = $.cookie("islogin"),
+				un = $.cookie("username");
+			if(islogin == "true"){
+				$(".head .fl").html(`你好<a href="#" class="color-or">${un}</a><a href="#">个人中心</a><a class="exit">退出</a> `);
+				$(".exit").click(function(event) {
+					$.cookie("islogin",false,{expires:30,path:"/"});
+					location = "/index.html";
+				});
+			}
+			
 			$(".listimg img").mouseenter(function() {
 				var src = $(this).prop("src");
 				$(".imgbox img").prop({
@@ -34,7 +45,35 @@ require(["config"],function(){
 				}
 			});
 			$(".footer").load("/html/model/footer.html");
-			$(".top").load("/html/model/top.html");
+			$(".top").load("/html/model/top.html",function(){
+				$(".addcart").click(function(e) {
+					var product = {
+							name: $(".name").html(),
+							price: $("#price").html(),
+							phone: $(".phone").html(),
+							qq: $(".qq").html(),
+							site: $(".ssite").html(),
+							src: $(".imgbox img").prop("src"),
+							link: location
+						},
+					products = $.cookie("products") || [];
+					if(!products.push){
+						products = JSON.parse(products);
+					}
+					for(var i=0; i<products.length; i++){
+						if(products[i].name == product.name){
+							$(".tocart").css({display:"block"});
+							$(".tocart p").html('这件商品已经加入进货单！<a href="/html/cart.html" title="">查看进货单&gt&gt&gt</a>');
+							return;
+						}
+					}
+					products.push(product);
+					$.cookie("products",JSON.stringify(products),{path: "/" ,expires: 30});
+				});
+				$(".alertclose,.know").click(function() {
+					$(".tocart").css({display:"none"});
+				});
+			});
 			$(".rightnav").load("/html/model/rightnav.html");
 			$(window).on("scroll",function(){
 				var scroll = $(window).scrollTop(),
@@ -81,30 +120,7 @@ require(["config"],function(){
 				$(this).addClass("focus");
 			})
 			function delay(){
-				$(".addcart").on("click",function() {
-					var par = $(this).parents(".pro-box"),
-						product = {
-							name: $(".name").html(),
-							price: $("#price").html(),
-							phone: $(".phone").html(),
-							qq: $(".qq").html(),
-							site: $(".ssite").html(),
-							src: $(".imgbox img").prop("src"),
-							link: location
-						},
-					products = $.cookie("products") || [];
-					if(!products.push){
-						products = JSON.parse(products);
-					}
-					for(var i=0; i<products.length; i++){
-						if(products[i].name == product.name){
-							return;
-						}
-					}
-					products.push(product);
-					$.cookie("products",JSON.stringify(products),{path: "/" ,expires: 30});
-					alert("success");
-				});
+				
 			}
 			setTimeout(delay,100);
 		});

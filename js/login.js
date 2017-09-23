@@ -66,7 +66,7 @@ require(["config"],function(){
 				}
 				console.log("send");
 				$.ajax({
-					url: "http://localhost/go2/php/login.php",
+					url: "/php/login.php",
 					type: "get",
 					dataType:"json",
 					data: "username=" +  $("#login-username").val() +"&password=" + $("#login-password").val(),
@@ -85,7 +85,7 @@ require(["config"],function(){
 		function jugcode(){
 			$.ajax({
 				type:"get",
-				url:"http://route.showapi.com/26-4",//"php/register.php",
+				url:"http://route.showapi.com/26-4",
 				data:{
 					showapi_sign:"a2bede57b62649b2bc42a1c043b07dab",
 					showapi_appid:"45024",

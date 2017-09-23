@@ -2,7 +2,7 @@ $or: #ff6700;
 $ly: #ffe2a3;
 html,body{
 	font-size: 12px;
-}
+} 
 .fl{
 	float: left;
 }
@@ -21,6 +21,52 @@ a:hover{
 .main{
 	width:1190px;
 	margin: 0 auto;
+}
+/*确认框*/
+.tocart{
+	width:100%;
+	height:100%;
+	background: rgba(0,0,0,0.3);
+	position: fixed;
+	z-index: 999;
+	top:0;
+	left: 0;
+	display: none;
+	.cartbox{
+		margin: 100px auto;
+		background: #fff;
+		width: 400px;
+		border-radius:10px;
+		overflow: hidden;
+		position: relative;
+		p{
+			background: url(/images/images/alert-success.png) no-repeat center 40px;
+			padding: 100px 60px 20px;
+			font-size: 18px;
+			text-align: center;
+			a{
+				color: #ff6700;
+				line-height: 40px;
+			}
+		}
+		.know{
+			width:100%;
+			text-align: center;
+			background: #ccc;
+			border:0;
+			border-top: 1px solid #666;
+			height: 50px;
+		}
+		.alertclose{
+			position:absolute;
+			right: 0;
+			top:0;
+			border: 0;
+			background: #fff;
+			outline:none;
+			font-size: 20px;
+		}
+	}
 }
 /*顶部滑动框*/
 .top{

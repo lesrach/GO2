@@ -14,7 +14,6 @@ require(["config"],function(){
 			}
 			/*cookie操作*/
 			var pro = JSON.parse($.cookie("pro-clean"));
-			console.log( pro);
 			$(".username").html($.cookie("username"));
 			$(".pro-name").prop("value",pro.name);
 			$(".color").prop("value",pro.color);
@@ -42,6 +41,12 @@ require(["config"],function(){
 				$(".pro-num").html(this.value);
 				$(".price,.count").html(this.value*$(".single-price").val())
 			})
+			/*退出*/
+			$(".icon-tuichu").click(function(event) {
+				event.preventDefault();
+				$.cookie("islogin",false,{expires: 30,path: "/"});
+				location = "/index.html";
+			});
 		})
 	});
 });

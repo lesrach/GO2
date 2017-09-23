@@ -5,6 +5,7 @@ require(["config"],function(){
 		$(function(){
 			$(".buyer").show();
 			jugcode();
+			$(".buyer").find(".checkimg")[0].innerHTML="<img src="+ codesrc+">";
 			$($(".rolebox")[0]).click(function(){
 				if($(".buyer").css("display") =="none"){
 					$(".rolebox").attr({class:"rolebox"});
@@ -61,15 +62,18 @@ require(["config"],function(){
 					$(this).next(".info")[0].innerHTML = "";
 					this.className = "";
 				}
-				// $.ajax({
-				// 	url:"/php/register.php",
-				// 	type:"post",
-				// 	data:"username="+text,
-				// 	dataType:"json",
-				// 	success:function(data){
-				// 		console.log(data);
-				// 	}
-				// })
+				$.ajax({
+					url:"http://localhost/go2/php/check.php",
+					type:"get",
+					data:"username="+text,
+					dataType:"json",
+					success:function(data){
+						console.log(data);
+						if(data.status == 0){
+							$(this).next(".info")[0].innerHTML = "该用户已存在"
+						}
+					}
+				})
 			})
 			//密码
 			$("#buyer-password,#provider-password,#agent-password").blur(function(){
@@ -169,9 +173,17 @@ require(["config"],function(){
 			//提交
 			$("#buyer-sub,#provider-sub,#agent-sub").click(function(e){
 				e.preventDefault();
+				var stop = false;
 				var content = $(this).parents("form"),
 					must = $(".must",content).parent().next("input"),
-					info = $(".info",content);
+					info = $(".info",content),
+					par = $(this).parents("form"),
+				    username = par.find('input[name="username"]').val(),
+				    password = par.find('input[name="password"]').val(),
+				    qq = par.find('input[name="qq"]').val(),
+				    email = par.find('input[name="email"]').val(),
+				    phone = par.find('input[name="phone"]').val(),
+				    senddata = "username="+username+"&password=" + password +"&email=" + email +"&phone=" + phone +"&qq=" + qq;;
 				must.each(function(index,curr){
 					if(curr.value == ""){
 						$(this).nextAll(".info")[0].innerHTML = "<span class='fr color-red'>请填写必填选项<span>"
@@ -182,11 +194,26 @@ require(["config"],function(){
 				info.each(function(index,curr){
 					if(curr.innerHTML!= ""){
 						e.preventDefault();
-						return;
+						stop = true;
+					}
+				})
+				if(!par.find("input[name='agreement']").prop("checked")){
+					stop = true;
+				}
+				if(stop){
+					return;
+				}
+				$.ajax({
+					url:"/php/register.php",
+					type:"post",
+					data: senddata,
+					dataType:"json",
+					success:function(data){
+						console.log(data);
 					}
 				})
 			})
-			//验证码
+			验证码
 			$("#buyer-check,#provider-check,#agent-check").blur(function(){
 				if(this.value != code){
 					$(this).nextAll(".info")[0].innerHTML = "<span class='fr color-red'>验证码错误<span>"
@@ -196,7 +223,7 @@ require(["config"],function(){
 					this.className = "";
 				}
 			})
-			//更换验证码
+			更换验证码
 			$(".changeimg").click(function(){
 				jugcode();
 				$(this).prev()[0].innerHTML = "<img src="+ codesrc+">";
@@ -204,7 +231,7 @@ require(["config"],function(){
 			function jugcode(){
 				$.ajax({
 					type:"get",
-					url:"http://route.showapi.com/26-4",//"php/register.php",
+					url:"http://route.showapi.com/26-4",
 					data:{
 						showapi_sign:"a2bede57b62649b2bc42a1c043b07dab",
 						showapi_appid:"45024",
@@ -218,7 +245,9 @@ require(["config"],function(){
 					}
 				})
 			}
+			$(".getnote").click(function(e){
+				e.preventDefault();
+			})
 		})
-		setTimeout('$(".buyer").find(".checkimg")[0].innerHTML="<img src="+ codesrc+">"',1000);
 	})
 })

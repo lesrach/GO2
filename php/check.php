@@ -1,6 +1,7 @@
 <?php 
 	header("Access-Control-Allow-Origin:*");
 	$username = $_GET["username"]; 
+	echo $username;
 	mysql_connect("localhost:3306", "root", "");
 	mysql_select_db("lesrach");
 	$sql = "SELECT COUNT(*) FROM wodesql WHERE username='$username'";

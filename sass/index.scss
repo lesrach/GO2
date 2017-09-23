@@ -300,6 +300,9 @@ a:hover { color: #ff6700; }
 		display: block;
 		float: left;
 	}
+	#banner2Cou .pages{
+		display: none;
+	}
 }
 /*搜索列表*/
 .index-list{
@@ -364,7 +367,7 @@ a:hover { color: #ff6700; }
 				}
 				.pullbox-left{
 					@extend .pullbox-right;
-					right: -1px;
+					left: -366px;
 				}
 			}
 		}
